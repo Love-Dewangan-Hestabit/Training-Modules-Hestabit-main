@@ -8,14 +8,15 @@ function getArg(flag, defaultValue = null) {
   return index !== -1 ? args[index + 1] : defaultValue;
 }
 
-const filePath =  getArg("--file");
-
+const filePath = getArg("--file");
 const topN = Number(getArg("--top", 10));
 const minLen = Number(getArg("--minLen", 1));
 const concurrency = Number(getArg("--concurrency", 1));
 
 if (!filePath) {
-  console.error("Usage: node wordstat.js --file corpus.txt --top 10 --minLen 5 --concurrency 4");
+  console.error(
+    "Usage: node wordstat.js --file corpus.txt --top 10 --minLen 5 --concurrency 4"
+  );
   process.exit(1);
 }
 
@@ -38,7 +39,7 @@ function processChunk(chunk) {
     let shortestWord = null;
 
     for (const word of words) {
-      totalWords++; 
+      totalWords++;
 
       if (word.length < minLen) continue;
 
@@ -54,13 +55,11 @@ function processChunk(chunk) {
   });
 }
 
-
 async function run() {
   const startTime = Date.now();
   const startMem = process.memoryUsage().heapUsed;
 
   const results = await Promise.all(chunks.map(processChunk));
-
 
   const freq = {};
   let totalWords = 0;
@@ -108,7 +107,6 @@ async function run() {
     JSON.stringify(stats, null, 2)
   );
 
-
   fs.mkdirSync("logs", { recursive: true });
 
   const perf = {
@@ -122,11 +120,10 @@ async function run() {
     JSON.stringify(perf, null, 2)
   );
 
-  
   console.log("\nWord Statistics");
-  console.log("Total words   :", totalWords);
-  console.log("Unique words  :", Object.keys(freq).length);
-  console.log("Longest word  :", longestWord);
+  console.log("Total words :", totalWords);
+  console.log("Unique words :", Object.keys(freq).length);
+  console.log("Longest word :", longestWord);
   console.log("Shortest word :", shortestWord);
 
   console.log(`\nTop ${topN} words`);
@@ -136,7 +133,7 @@ async function run() {
 
   console.log("\nPerformance");
   console.log("Concurrency :", concurrency);
-  console.log("Time (ms)   :", timeMs);
+  console.log("Time (ms) :", timeMs);
   console.log("Memory (MB) :", memoryMB);
 }
 

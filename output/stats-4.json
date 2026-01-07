@@ -1,0 +1,49 @@
+{
+  "concurrency": 4,
+  "totalWords": 250003,
+  "uniqueWords": 15,
+  "longestWord": "consectetur",
+  "shortestWord": "ipsum",
+  "topWords": [
+    {
+      "word": "integer",
+      "count": 10201
+    },
+    {
+      "word": "dapibus",
+      "count": 10101
+    },
+    {
+      "word": "nulla",
+      "count": 10100
+    },
+    {
+      "word": "cursus",
+      "count": 10087
+    },
+    {
+      "word": "libero",
+      "count": 10056
+    },
+    {
+      "word": "sednisi",
+      "count": 10053
+    },
+    {
+      "word": "lorem",
+      "count": 10046
+    },
+    {
+      "word": "ipsum",
+      "count": 10017
+    },
+    {
+      "word": "dolor",
+      "count": 10008
+    },
+    {
+      "word": "elementum",
+      "count": 9959
+    }
+  ]
+}
