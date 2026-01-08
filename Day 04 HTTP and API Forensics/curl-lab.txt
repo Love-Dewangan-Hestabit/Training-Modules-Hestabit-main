@@ -1,0 +1,114 @@
+ETag Caching Validation
+
+Initial HEAD request:
+curl -I https://dummyjson.com/products
+
+Responses:
+HTTP/2 200 
+date: Thu, 08 Jan 2026 10:21:32 GMT
+content-type: application/json; charset=utf-8
+server: cloudflare
+x-ratelimit-limit: 100
+x-ratelimit-remaining: 99
+x-ratelimit-reset: 1763676501
+x-dns-prefetch-control: off
+x-frame-options: SAMEORIGIN
+strict-transport-security: max-age=15552000; includeSubDomains
+x-download-options: noopen
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+access-control-allow-origin: *
+etag: W/"ac3a-uk0FDUI0X0lS5liyUbIxqA7L7F4"
+vary: Accept-Encoding
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=bYAyvKr6tN9jOI0Xki02Y4oGqGMUOx980czwdWS4Ytl41Hg9cHC13D2cPeiX5za%2FONtuPLb10uVvuyQB9cpjjVTMKgZvB2wA%2BVJquKE%3D"}]}
+age: 522557
+cache-control: no-store
+cf-cache-status: HIT
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-ray: 9baaf7f54c99e19a-MRS
+
+Returned ETag:
+W/"ac3a-uk0FDUI0X0lS5liyUbIxqA7L7F4"
+
+Conditional request using If-None-Match:
+curl -v -H 'If-None-Match: W/"ac3a-uk0FDUI0X0lS5liyUbIxqA7L7F4"' https://dummyjson.com/products
+
+Responses:
+* Host dummyjson.com:443 was resolved.
+* IPv6: 2606:4700:3033::6815:3d17, 2606:4700:3031::ac43:cd2a
+* IPv4: 104.21.61.23, 172.67.205.42
+*   Trying 104.21.61.23:443...
+*   Trying [2606:4700:3033::6815:3d17]:443...
+* Immediate connect fail for 2606:4700:3033::6815:3d17: Network is unreachable
+*   Trying [2606:4700:3031::ac43:cd2a]:443...
+* Immediate connect fail for 2606:4700:3031::ac43:cd2a: Network is unreachable
+* Connected to dummyjson.com (104.21.61.23) port 443
+* ALPN: curl offers h2,http/1.1
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=dummyjson.com
+*  start date: Dec 14 16:36:12 2025 GMT
+*  expire date: Mar 14 17:33:27 2026 GMT
+*  subjectAltName: host "dummyjson.com" matched cert's "dummyjson.com"
+*  issuer: C=US; O=Google Trust Services; CN=WE1
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256
+*   Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://dummyjson.com/products
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: dummyjson.com]
+* [HTTP/2] [1] [:path: /products]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+* [HTTP/2] [1] [if-none-match: W/"ac3a-uk0FDUI0X0lS5liyUbIxqA7L7F4"]
+> GET /products HTTP/2
+> Host: dummyjson.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> If-None-Match: W/"ac3a-uk0FDUI0X0lS5liyUbIxqA7L7F4"
+> 
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* old SSL session ID is stale, removing
+< HTTP/2 304 
+< date: Thu, 08 Jan 2026 10:22:31 GMT
+< server: cloudflare
+< age: 522617
+< x-ratelimit-limit: 100
+< x-ratelimit-remaining: 99
+< x-ratelimit-reset: 1763676501
+< x-dns-prefetch-control: off
+< x-frame-options: SAMEORIGIN
+< strict-transport-security: max-age=15552000; includeSubDomains
+< x-download-options: noopen
+< x-content-type-options: nosniff
+< x-xss-protection: 1; mode=block
+< access-control-allow-origin: *
+< etag: W/"ac3a-uk0FDUI0X0lS5liyUbIxqA7L7F4"
+< vary: Accept-Encoding
+< cache-control: no-store
+< cf-cache-status: HIT
+< report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=lxuEHhHpfnOD1oeNON4M74a5g7ANT2Bhp5MWkHZCyumVjU0elqR8kYlAKRuCT3jD4CAElInTkTXpTVGvG0dMRmCqjjdW54RHoRHimOg%3D"}]}
+< nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+< cf-ray: 9baaf969cf91e1c4-MRS
+< 
+* Connection #0 to host dummyjson.com left intact
+
+Result:
+HTTP/2 304 Not Modified
+
+
