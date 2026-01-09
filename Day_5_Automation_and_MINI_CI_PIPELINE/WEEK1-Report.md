@@ -52,6 +52,19 @@ By the end of Day 2, I learned to build professional command-line tools and unde
 
 By the end of Day 3, I learned that Git is far more powerful than just a save button—it's a complete version control system with tools for time travel, debugging, and collaboration. I discovered that most "Git disasters" aren't actually disasters because nothing is truly lost (thanks to reflog). The biggest mindset shift was understanding the difference between rewriting history (reset) and preserving it (revert), and knowing when each approach is appropriate. I can now confidently recover from mistakes, hunt down bugs using bisect, and handle merge conflicts without panic. Most importantly, I learned that good Git workflow isn't about avoiding mistakes—it's about having the tools to fix them safely.
 
+### What Broke
+
+**Git Bisect Confusion**
+- First time using bisect—didn't understand the "good" vs "bad" marking system and marked commits randomly.
+- **Solution:** Realized bisect uses binary search. I needed to test code at each checkout, mark it based on whether the bug exists, and let Git narrow it down automatically.
+
+**Stash Workflow **
+- Used `git stash` and my changes "disappeared," thought I lost everything.
+- **Solution:** Learned `git stash list` shows stored changes and `git stash apply` restores them.
+
+**Merge Conflict Markers Mystery**
+- Hit first real conflict and the `<<<<<<<`, `=======`, `>>>>>>>` markers looked like gibberish.
+
 ### Research
 
 - Researched how Git stores commits internally as snapshots, not diffs
@@ -83,6 +96,16 @@ By the end of Day 4, I learned that HTTP isn't magic it's just structured text f
 ### Learning Outcomes
 
 By the end of Day 5, I learned that automation isn't about being lazy—it's about being consistent and preventing human error. Setting up pre-commit hooks, linters, and build scripts took time upfront, but I now understand that good engineering teams automate everything that can be automated. The biggest realization was that configuration files like `.eslintrc` and `.prettierrc` aren't just preferences they're team contracts that ensure everyone's code looks and behaves the same way. I discovered that Git hooks act as guardrails, catching mistakes before they become problems in production. Building automated validation scripts taught me to think about "what could go wrong" and build safeguards proactively. Most importantly, I learned that professional development isn't just about writing code—it's about creating reproducible, reliable processes that scale across teams and time.
+
+### What Broke
+
+**Husky Installation Issues**
+- Followed outdated tutorial with deprecated Husky v8+ commands that didn't work.
+- **Solution:** Read official docs for the new setup method and learned hook files need `chmod +x` to be executable.
+
+**ESLint and Prettier Conflicts**
+- Set them up separately, causing endless formatting conflicts between single/double quotes and indentation rules.
+- **Solution:** Installed `eslint-config-prettier` to let Prettier handle all formatting while ESLint focuses on code quality.
 
 ### Research
 
