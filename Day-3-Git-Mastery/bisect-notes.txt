@@ -1,0 +1,10 @@
+Git Bisect Outcome
+
+The test initially failed on all older commits because
+the function `countCharacters` did not exist before
+Commit 4.
+
+Commit 4 introduced the function but implemented it incorrectly,
+making it the first bad commit.
+
+Bisect required redefining the test to match commit history.
