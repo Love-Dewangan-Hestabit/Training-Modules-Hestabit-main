@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.top-bar {
+  display: flex;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+}
+
+.header {
+  padding: 20px 40px;
+  color: white;
+  flex: 0 0 23%;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.menu {
+  flex: 1;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.menu a:hover {
+  opacity: 0.6;
+}
+
+.menu .cart {
+  border: 2px solid white;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeSlide 12s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide1 {
+  animation-delay: 0s;
+}
+
+.slide2 {
+  animation-delay: 4s;
+}
+
+.slide3 {
+  animation-delay: 8s;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+
+  margin: 0 auto;
+}
+
+.main {
+  flex: 2;
+  background-color: #000000;
+  padding: 40px;
+
+  color: white;
+}
+
+.main h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section-desc {
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.sneaker-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sneaker-card {
+  background-color: #ffffff1f;
+  padding: 8px;
+
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.sneaker-card:hover {
+  transform: translateY(-5px);
+}
+
+.sneaker-img {
+  background-color: #111;
+  height: 280px;
+
+  overflow: hidden;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sneaker-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.sneaker-card:hover .sneaker-img img {
+  transform: scale(1.08);
+}
+
+.brand {
+  color: #a0aec0;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.condition {
+  background-color: #000000;
+  padding: 5px 15px;
+
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-section {
+  background-color: #0000007c;
+
+  position: relative;
+  min-width: 600px;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.extra-section {
+  background-color: #0000007c;
+  padding: 36px;
+}
+
+.feature {
+  display: flex;
+  gap: 15px;
+  color: white;
+}
+
+.banner {
+  background-image: url("images/banner.jpg");
+}
+
+.banner-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 50px 80px;
+  text-align: center;
+  color: white;
+}
+
+.banner h2 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.banner p {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.footer {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sneaker-grid {
+    grid-template-columns: 1fr;
+  }
+}
