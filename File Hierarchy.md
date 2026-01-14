@@ -1,5 +1,6 @@
 # Training Modules - Hestabit
 
+```text
 TRAINING-MODULES-HESTABIT-MAIN/
 │
 ├── Week 1 Engineering Mindset Bootcamp/
@@ -15,3 +16,4 @@ TRAINING-MODULES-HESTABIT-MAIN/
 │ └── Day 03 JavaScript and DOM Manipulation/
 │
 └── File Hierarchy.md
+```
