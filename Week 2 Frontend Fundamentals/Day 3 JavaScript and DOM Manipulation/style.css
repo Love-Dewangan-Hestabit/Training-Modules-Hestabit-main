@@ -1,0 +1,61 @@
+.container {
+  padding-top: 5%;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+
+  padding: 18px;
+  width: 70%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+.active {
+  background-color: rgb(92, 92, 92);
+}
+
+.accordion:hover {
+  background-color: rgb(158, 156, 156);
+}
+
+.accordion:after {
+  content: "\02795";
+  font-size: 13px;
+
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796";
+}
+
+.panel {
+  background-color: rgba(0, 0, 0, 0.151);
+  width: 70%;
+  display: none;
+}
+
+.panel p {
+  padding: 18px;
+  margin: 0;
+}
+
+.panel ul {
+  margin: 0;
+  padding: 0 18px 18px 36px;
+}
+
+.note {
+  padding: 0;
+  margin: 0;
+}
