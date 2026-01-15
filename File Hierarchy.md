@@ -13,7 +13,8 @@ TRAINING-MODULES-HESTABIT-MAIN/
 ├── Week 2 Frontend Fundamentals/
 │ ├── Day 01 HTML5 and Semantic Layout/
 │ ├── Day 02 CSS Layout Mastery/
-│ └── Day 03 JavaScript and DOM Manipulation/
-│
+│ ├── Day 03 JavaScript and DOM Manipulation/
+│ └── Day 04 JS Utilities and LocalStorage Mini Project/
+|
 └── File Hierarchy.md
 ```
