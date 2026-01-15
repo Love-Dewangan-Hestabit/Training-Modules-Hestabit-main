@@ -29,7 +29,7 @@ function loadTodos() {
   }
 }
 
-function renderTodos() {
+function displayTodos() {
   pendingList.innerHTML = "";
   completedList.innerHTML = "";
 
@@ -97,13 +97,13 @@ function addTodo() {
   descInput.value = "";
 
   saveTodos();
-  renderTodos();
+  displayTodos();
 }
 
 function deleteTodo(id) {
   todos = todos.filter((t) => t.id !== id);
   saveTodos();
-  renderTodos();
+  displayTodos();
 }
 
 function editTodo(id) {
@@ -121,7 +121,7 @@ function editTodo(id) {
   }
 
   saveTodos();
-  renderTodos();
+  displayTodos();
 }
 
 function toggleComplete(id) {
@@ -137,7 +137,7 @@ function toggleComplete(id) {
   }
 
   saveTodos();
-  renderTodos();
+  displayTodos();
 }
 
 function toggleAccordion(id) {
@@ -153,7 +153,7 @@ function toggleAccordion(id) {
   }
 
   saveTodos();
-  renderTodos();
+  displayTodos();
 }
 
 addBtn.addEventListener("click", addTodo);
@@ -162,4 +162,4 @@ titleInput.addEventListener("keypress", (e) => {
 });
 
 loadTodos();
-renderTodos();
+displayTodos();
