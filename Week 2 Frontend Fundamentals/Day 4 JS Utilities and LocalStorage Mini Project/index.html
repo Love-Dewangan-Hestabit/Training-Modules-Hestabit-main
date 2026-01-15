@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="Todo-app">
+    <header class="app-header">
+      <h1>Momentum 📈</h1>
+      <p>Stay organized. Stay productive.</p>
+    </header>
+
+    <section class="Todo-input">
+      <input type="text" id="todo-title" placeholder="Todo title" />
+      <textarea id="todo-desc" placeholder="Description (optional)"></textarea>
+      <button id="Task-btn">Add Task</button>
+    </section>
+
+    <section class="todo-section">
+      <h2>Pending</h2>
+      <ul id="pending-list"></ul>
+    </section>
+
+    <section class="todo-section completed-section">
+      <h2>Completed</h2>
+      <ul id="completed-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
