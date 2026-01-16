@@ -14,7 +14,8 @@ TRAINING-MODULES-HESTABIT-MAIN/
 │ ├── Day 01 HTML5 and Semantic Layout/
 │ ├── Day 02 CSS Layout Mastery/
 │ ├── Day 03 JavaScript and DOM Manipulation/
-│ └── Day 04 JS Utilities and LocalStorage Mini Project/
+│ ├── Day 04 JS Utilities and LocalStorage Mini Project/
+│ └── Day 05 Capstone UI and JS Project/
 |
 └── File Hierarchy.md
 ```
