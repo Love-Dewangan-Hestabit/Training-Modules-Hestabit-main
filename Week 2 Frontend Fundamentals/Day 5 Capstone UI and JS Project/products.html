@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+
+            <div class="nav-wrapper">
+                <div class="logo">ESSENCE</div>
+                <nav class="nav">
+                    <a href="index.html">HOME</a>
+                    <a href="products.html">SHOP</a>
+                    <a href="#about">ABOUT</a>
+                    <a href="#contact">CONTACT</a>
+                </nav>
+
+                
+            <div class="nav-icons">
+                <button class="icon-btn" id="searchToggle" aria-label="Search">
+                    <img src="Icon/search.png" alt="Search" class="nav-icon">
+                </button>
+                <button class="icon-btn" aria-label="Cart">
+                    <img src="Icon/trolley.png" alt="Cart" class="nav-icon">
+                </button>
+            </div>
+
+            </div>
+        </div>
+    </header>
+
+   
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Collection</h1>
+            <p class="page-subtitle">Explore our complete range of premium products</p>
+        </div>
+    </section>
+
+
+
+    <div class="search-container" id="searchContainer">
+        <div class="container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search products...">
+
+        </div>
+    </div>
+
+    
+    <section class="filter-section" id="shop">
+
+
+        <div class="container">
+            <div class="filter-wrapper">
+                <div class="results-count" id="resultsCount">
+                    Showing all products
+                </div>
+                <div class="filter-controls">
+                    <select id="categorySelect" class="select-box">
+
+                        <option value="all">All Categories</option>
+                        
+                    </select>
+
+
+                <select id="sortSelect" class="select-box">
+                    <option value="default">Sort By</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="name">Name: A to Z</option>
+                    <option value="rating-high">Rating: High to Low</option>
+                    <option value="rating-low">Rating: Low to High</option>
+                </select>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+
+                <!-- here the products will be dynamically uploaded after getting fetched -->
+
+            </div>
+        </div>
+    </section>
+
+ 
+    <footer class="footer">
+
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-section">
+                    <h3 class="footer-title">ESSENCE</h3>
+                    <p class="footer-text">Premium fragrances crafted with passion</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Shipping</a>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <a href="#" class="footer-link">Instagram</a>
+                    <a href="#" class="footer-link">Facebook</a>
+                    <a href="#" class="footer-link">Twitter</a>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+
+                <p>&copy; 2026 ESSENCE. All rights reserved.</p>
+
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+</body>
+</html>
