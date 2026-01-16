@@ -7,6 +7,10 @@
 
 Build a mini “E-commerce product listing page".
 
+## Final Output
+
+![Outcome](./screenshots/Final_Output.gif)
+
 ## Learning and Outcomes
 
 **Fetching from an API(In this case Product Images and Details)**
@@ -50,7 +54,3 @@ Learnt about sticky header where I learnt how it is implemented by CSS property 
 **Transition Effect**
 Created a Hover Elevation Effect through this in the webpage also learnt about transition properties for adding hovering effect.
 ![Hover Elevation Effect](./screenshots/Transition_Effect.gif)
-
-## Final Output
-
-![Outcome](./screenshots/Final_Output.gif)
