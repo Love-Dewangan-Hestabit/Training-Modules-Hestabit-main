@@ -17,5 +17,12 @@ TRAINING-MODULES-HESTABIT-MAIN/
 │ ├── Day 04 JS Utilities and LocalStorage Mini Project/
 │ └── Day 05 Capstone UI and JS Project/
 |
+├── Week 3 Advance Frontend (Next.js and TailwindCSS)/
+│ ├── Day 01 TailwindCSS and UI System Basics/
+│ ├── Day 02 Tailwind Advanced and Component Library/
+│ ├── Day 03 JNext.js Routing and Layout System/
+│ ├── Day 04 Dynamic UI and Image Optimization/
+│ └── Day 05  Capstone Mini Project (No backend)/
+│
 └── File Hierarchy.md
 ```
