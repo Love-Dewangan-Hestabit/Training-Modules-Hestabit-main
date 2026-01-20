@@ -6,18 +6,20 @@ export default function Card({
   className = "",
 }) {
   const variants = {
-    primary: "bg-blue-600 text-white",
-    warning: "bg-yellow-500 text-white",
-    success: "bg-green-600 text-white",
-    danger: "bg-red-600 text-white",
+    blue: "bg-blue-600 text-white",
+
+    yellow: "bg-yellow-500 text-white",
+    green: "bg-green-600 text-white",
+
+    red: "bg-red-600 text-white",
   };
 
   return (
     <div className={`rounded-lg shadow-md overflow-hidden ${className}`}>
-      <div className={`p-4 ${variants[variant]}`}>
+      <div className={`p-4 ${variants[variant]} border-b-2 border-white/20`}>
         <h3 className="text-lg font-semibold">{title}</h3>
       </div>
-      <div className="p-4 bg-white">{children}</div>
+
       {footer && (
         <div
           className={`p-3 ${variants[variant]} flex items-center justify-between text-sm`}

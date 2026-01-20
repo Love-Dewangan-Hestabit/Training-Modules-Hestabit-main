@@ -4,104 +4,128 @@ import { useState } from "react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import Modal from "@/components/ui/Modal";
+import Input from "@/components/ui/Input";
+
+import {
+  AreaChart,
+  Area,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+
+const chartData = [
+  { name: "Mon", value: 30 },
+  { name: "Tue", value: 45 },
+  { name: "Wed", value: 28 },
+  { name: "Thu", value: 60 },
+  { name: "Fri", value: 50 },
+];
 
 export default function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div>
-      {/* Breadcrumb */}
       <div className="mb-4">
-        <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
-        <p className="text-gray-600 text-sm">Dashboard</p>
+        <h1 className="pb-4 text-2xl font-bold text-gray-800">Dashboard</h1>
+        <p className="p-4 bg-gray-200 text-gray-800 text-sm">Dashboard</p>
       </div>
 
-      {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
         <Card
           title="Primary Card"
-          variant="primary"
+          variant="blue"
           footer={
             <>
               <span>View Details</span>
-              <span>→</span>
+              <span> {">"} </span>
             </>
           }
-        >
-          <p className="text-gray-700">This is a primary card component.</p>
-        </Card>
-
+        />
         <Card
           title="Warning Card"
-          variant="warning"
+          variant="yellow"
           footer={
             <>
               <span>View Details</span>
-              <span>→</span>
+              <span> {">"} </span>
             </>
           }
-        >
-          <p className="text-gray-700">This is a warning card component.</p>
-        </Card>
-
+        />
         <Card
           title="Success Card"
-          variant="success"
+          variant="green"
           footer={
             <>
               <span>View Details</span>
-              <span>→</span>
+              <span> {">"} </span>
             </>
           }
-        >
-          <p className="text-gray-700">This is a success card component.</p>
-        </Card>
-
+        />
         <Card
           title="Danger Card"
-          variant="danger"
+          variant="red"
           footer={
             <>
               <span>View Details</span>
-              <span>→</span>
+              <span> {">"} </span>
             </>
           }
-        >
-          <p className="text-gray-700">This is a danger card component.</p>
-        </Card>
+        />
       </div>
 
-      {/* Charts Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        {/* Area Chart */}
         <div className="bg-white rounded-lg shadow-md p-6">
           <div className="flex items-center gap-2 mb-4">
             <span className="text-lg">📊</span>
-            <h3 className="font-semibold text-gray-800">Area Chart Example</h3>
+            <h3 className="font-semibold text-gray-800">Area Chart</h3>
           </div>
-          <div className="h-64 bg-blue-50 rounded flex items-end justify-around p-4"></div>
+
+          <div className="h-64 text-gray-800">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={chartData}>
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Area dataKey="value" fill="#3b82f6" stroke="#3b82f6" />
+              </AreaChart>
+            </ResponsiveContainer>
+          </div>
         </div>
 
-        {/* Bar Chart */}
         <div className="bg-white rounded-lg shadow-md p-6">
           <div className="flex items-center gap-2 mb-4">
             <span className="text-lg">📊</span>
-            <h3 className="font-semibold text-gray-800">Bar Chart Example</h3>
+            <h3 className="font-semibold text-gray-800">Bar Chart</h3>
+          </div>
+
+          <div className="h-64 text-gray-600">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={chartData}>
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Bar dataKey="value" fill="#22c55e" />
+              </BarChart>
+            </ResponsiveContainer>
           </div>
         </div>
       </div>
 
-      {/* Datatable Section */}
       <div className="bg-white rounded-lg shadow-md p-6">
         <div className="flex items-center gap-2 mb-4">
           <span className="text-lg">🗂️</span>
-          <h3 className="font-semibold text-gray-800">Datatable Example</h3>
+          <h3 className="font-semibold text-gray-800">Data Table</h3>
         </div>
 
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-600">Show</span>
-            <select className="border border-gray-300 rounded px-2 py-1 text-sm">
+            <select className="border border-gray-300 rounded px-2 py-1 text-sm text-gray-600">
               <option>10</option>
               <option>25</option>
               <option>50</option>
@@ -111,65 +135,61 @@ export default function Dashboard() {
 
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-600">Search:</span>
-            <input
+            <Input
               type="text"
-              className="border border-gray-300 rounded px-3 py-1 text-sm"
+              placeholder="Search..."
+              variant="search"
+              className="border border-gray-300 rounded px-3 py-1 text-sm text-gray-600"
             />
           </div>
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left">
+          <table className="w-full text-sm text-left text-gray-600">
             <thead className="bg-gray-50 border-b">
               <tr>
-                <th className="px-4 py-3 font-medium text-gray-700">Name</th>
-                <th className="px-4 py-3 font-medium text-gray-700">
-                  Position
-                </th>
-                <th className="px-4 py-3 font-medium text-gray-700">Office</th>
-                <th className="px-4 py-3 font-medium text-gray-700">Age</th>
-                <th className="px-4 py-3 font-medium text-gray-700">
-                  Start Date
-                </th>
-                <th className="px-4 py-3 font-medium text-gray-700">Salary</th>
+                <th className="px-4 py-3 font-medium">Name</th>
+                <th className="px-4 py-3 font-medium">Position</th>
+                <th className="px-4 py-3 font-medium">Office</th>
+                <th className="px-4 py-3 font-medium">Age</th>
+                <th className="px-4 py-3 font-medium">Start Date</th>
+                <th className="px-4 py-3 font-medium">Salary</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-b hover:bg-gray-50">
-                <td className="px-4 py-3">Tiger Nixon</td>
-                <td className="px-4 py-3">System Architect</td>
-                <td className="px-4 py-3">Edinburgh</td>
-                <td className="px-4 py-3">61</td>
-                <td className="px-4 py-3">2011/04/25</td>
-                <td className="px-4 py-3">$320,800</td>
+                <td className="px-4 py-3">James </td>
+                <td className="px-4 py-3">Architect</td>
+                <td className="px-4 py-3">Scotland</td>
+                <td className="px-4 py-3">54</td>
+                <td className="px-4 py-3">2003/04/26</td>
+                <td className="px-4 py-3">$128,800</td>
               </tr>
               <tr className="border-b hover:bg-gray-50">
-                <td className="px-4 py-3">Garrett Winters</td>
-                <td className="px-4 py-3">Accountant</td>
-                <td className="px-4 py-3">Tokyo</td>
-                <td className="px-4 py-3">63</td>
-                <td className="px-4 py-3">2011/07/25</td>
-                <td className="px-4 py-3">$170,750</td>
+                <td className="px-4 py-3">Brock</td>
+                <td className="px-4 py-3">Charted Accountant</td>
+                <td className="px-4 py-3">Germany</td>
+                <td className="px-4 py-3">56</td>
+                <td className="px-4 py-3">2003/02/23</td>
+                <td className="px-4 py-3">$200,600</td>
               </tr>
               <tr className="border-b hover:bg-gray-50">
-                <td className="px-4 py-3">Ashton Cox</td>
-                <td className="px-4 py-3">Junior Technical Author</td>
-                <td className="px-4 py-3">San Francisco</td>
-                <td className="px-4 py-3">66</td>
-                <td className="px-4 py-3">2009/01/12</td>
-                <td className="px-4 py-3">$86,000</td>
+                <td className="px-4 py-3">Daniel</td>
+                <td className="px-4 py-3">Software Engineer</td>
+                <td className="px-4 py-3">Texas</td>
+                <td className="px-4 py-3">60</td>
+                <td className="px-4 py-3">2006/04/11</td>
+                <td className="px-4 py-3">$78,000</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      {/* Demo Button for Modal */}
       <div className="mt-6">
         <Button onClick={() => setIsModalOpen(true)}>Open Modal Demo</Button>
       </div>
 
-      {/* Modal */}
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -186,8 +206,7 @@ export default function Dashboard() {
         }
       >
         <p className="text-gray-700">
-          This is an example modal dialog. You can put any content here
-          including forms, messages, or confirmations.
+          This modal for testing this function will update this later
         </p>
       </Modal>
     </div>
