@@ -13,7 +13,12 @@ export default function Navbar({ toggleSidebar }) {
       </div>
 
       <div className="flex items-center">
-        <Input variant="search" placeholder="Search..." />
+        <Input
+          type="text"
+          placeholder="Search..."
+          variant="search"
+          className="px-3 py-2 text-sm rounded-l text-gray-600"
+        />
         <Button variant="search">🔍</Button>
       </div>
     </header>
