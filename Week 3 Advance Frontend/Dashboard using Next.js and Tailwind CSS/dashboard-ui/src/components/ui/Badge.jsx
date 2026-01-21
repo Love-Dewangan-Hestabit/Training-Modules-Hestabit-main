@@ -4,10 +4,10 @@ export default function Badge({
   className = "",
 }) {
   const variants = {
-    primary: "bg-blue-100 text-blue-800",
-    warning: "bg-yellow-100 text-yellow-800",
-    success: "bg-green-100 text-green-800",
-    danger: "bg-red-100 text-red-800",
+    blue: "bg-blue-100 text-blue-800",
+    yellow: "bg-yellow-100 text-yellow-800",
+    green: "bg-green-100 text-green-800",
+    red: "bg-red-100 text-red-800",
   };
 
   return (
