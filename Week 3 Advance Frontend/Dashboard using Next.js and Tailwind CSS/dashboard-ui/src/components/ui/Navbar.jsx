@@ -9,7 +9,12 @@ export default function Navbar({ toggleSidebar }) {
           ☰
         </Button>
 
-        <span className="font-semibold text-lg">Start Bootstrap</span>
+        <a href="/" className="font-semibold text-lg">
+          Fitbit
+        </a>
+        {/* <span href="/app" className="font-semibold text-lg">
+          Fitbit
+        </span> */}
       </div>
 
       <div className="flex items-center">

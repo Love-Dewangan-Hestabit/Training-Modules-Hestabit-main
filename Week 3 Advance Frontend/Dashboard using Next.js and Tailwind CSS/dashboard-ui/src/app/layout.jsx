@@ -1,29 +1,13 @@
-"use client";
-
 import "./globals.css";
-import { useState } from "react";
-import Navbar from "@/components/ui/Navbar";
-import Sidebar from "@/components/ui/Sidebar";
+
+export const metadata = {
+  title: "Dashboard App",
+};
 
 export default function RootLayout({ children }) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
-  let sidebar;
-
-  if (isSidebarOpen) {
-    sidebar = <Sidebar />;
-  }
-
   return (
     <html lang="en">
-      <body>
-        <Navbar toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
-
-        <div className="flex">
-          {sidebar}
-          <main className="flex-1 p-6 bg-gray-100">{children}</main>
-        </div>
-      </body>
+      <body className="bg-white">{children}</body>
     </html>
   );
 }
