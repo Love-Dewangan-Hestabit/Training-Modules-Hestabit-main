@@ -6,15 +6,23 @@ export default function Button({
   className = "",
 }) {
   const baseStyles =
-    "rounded transition-colors duration-200 flex items-center justify-between";
+    "transition-colors duration-200 flex items-center justify-center";
 
   const variants = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700",
+    primary: "rounded bg-blue-600 text-white hover:bg-blue-700",
+
     search:
-      "bg-blue-600 px-3 py-2 text-sm rounded-l-none rounded-r hover:bg-blue-700",
+      "rounded bg-blue-600 px-3 py-2 text-sm rounded-l-none rounded-r hover:bg-blue-700",
+
     hamBurger: "text-xl hover:bg-gray-600",
-    tryForFree:
-      "rounded-full bg-orange-500/70 text-white px-12 py-4 hover:bg-orange-600/70",
+
+    tryForFree: "rounded-full bg-white px-6 sm:px-10 md:px-12 py-3 md:py-4",
+
+    signUpFree:
+      "rounded-md bg-black px-6 sm:px-10 md:px-12 py-3 md:py-4 hover:bg-gray-700",
+
+    joinToday:
+      "bg-white px-10 sm:px-24 md:px-64 py-3 md:py-4 hover:bg-black hover:text-white border border-black",
   };
 
   const sizes = {

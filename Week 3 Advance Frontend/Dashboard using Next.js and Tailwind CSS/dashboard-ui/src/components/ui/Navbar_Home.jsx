@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Image from "next/image";
 import Input from "./Input";
 
 export default function NavbarHome() {
@@ -13,9 +14,18 @@ export default function NavbarHome() {
       flex items-center justify-between px-6
     "
     >
-      <span className="font-semibold font-sans text-2xl">Fitbit</span>
+      <div className="flex gap-2">
+        <Image
+          src="/running.png"
+          alt="Fitbit Logo"
+          width={40}
+          height={30}
+          className="invert"
+        />
+        <span className="font-extrabold font-sans text-3xl">FITBIT</span>
+      </div>
 
-      <div className="absolute left-1/2 -translate-x-1/2 flex gap-8 text-white font-sans font-semibold">
+      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 text-white font-sans font-semibold">
         <a href="/about" className="hover:text-gray-300">
           ABOUT
         </a>
@@ -35,13 +45,12 @@ export default function NavbarHome() {
           CAREERS
         </a>
       </div>
-
       <div className="flex items-center">
         <Button
-          variant="tryForFree"
-          className=" text-white font-sans font-extrabold hover:text-black/50"
+          variant="signUpFree"
+          className=" text-white font-sans font-semibold hover:text-black hover:bg-white"
         >
-          Try Us For Free
+          Sign Up Free
         </Button>
       </div>
     </header>
