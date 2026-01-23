@@ -20,11 +20,11 @@ import {
 } from "recharts";
 
 const chartData = [
-  { name: "Mon", value: 30 },
-  { name: "Tue", value: 45 },
-  { name: "Wed", value: 28 },
-  { name: "Thu", value: 60 },
-  { name: "Fri", value: 50 },
+  { name: "Mon", value: 45 },
+  { name: "Tue", value: 52 },
+  { name: "Wed", value: 38 },
+  { name: "Thu", value: 65 },
+  { name: "Fri", value: 58 },
 ];
 
 export default function DashboardPage() {
@@ -33,17 +33,12 @@ export default function DashboardPage() {
 
   return (
     <>
-      {/* Top Navbar */}
       <Navbar toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
 
-      {/* Layout Wrapper */}
       <div className="flex min-h-screen bg-gray-100">
-        {/* Sidebar */}
         {isSidebarOpen && <Sidebar />}
 
-        {/* Main Content */}
         <main className="flex-1 p-6 overflow-y-auto">
-          {/* Page Header */}
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-gray-800 mb-2">Dashboard</h1>
             <div className="bg-gray-200 text-gray-700 text-sm px-4 py-2 rounded">
@@ -51,60 +46,63 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            <Card title="Primary Card" variant="blue" footer="View Details >" />
             <Card
-              title="Warning Card"
-              variant="yellow"
+              title="Workouts This Week"
+              variant="gray1"
               footer="View Details >"
             />
             <Card
-              title="Success Card"
-              variant="green"
+              title="Calories Burned"
+              variant="gray2"
               footer="View Details >"
             />
-            <Card title="Danger Card" variant="red" footer="View Details >" />
+            <Card title="Active Days" variant="gray3" footer="View Details >" />
+            <Card
+              title="Weight Progress"
+              variant="gray4"
+              footer="View Details >"
+            />
           </div>
 
-          {/* Charts */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            {/* Area Chart */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="font-semibold text-gray-800 mb-4">
-                📊 Area Chart
+                📊 Workout Minutes
               </h3>
               <div className="h-64">
                 <ResponsiveContainer width="100%" height="100%">
                   <AreaChart data={chartData}>
                     <XAxis dataKey="name" />
                     <YAxis />
-                    <Tooltip />
-                    <Area dataKey="value" stroke="#3b82f6" fill="#93c5fd" />
+                    <Tooltip contentStyle={{ color: "#000" }} />
+                    <Area dataKey="value" stroke="#000000" fill="#808080" />
                   </AreaChart>
                 </ResponsiveContainer>
               </div>
             </div>
 
-            {/* Bar Chart */}
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="font-semibold text-gray-800 mb-4">📊 Bar Chart</h3>
+              <h3 className="font-semibold text-gray-800 mb-4">
+                📊 Calories Burned
+              </h3>
               <div className="h-64">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={chartData}>
                     <XAxis dataKey="name" />
                     <YAxis />
-                    <Tooltip />
-                    <Bar dataKey="value" fill="#22c55e" />
+                    <Tooltip contentStyle={{ color: "#000" }} />
+                    <Bar dataKey="value" fill="#808080" />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
             </div>
           </div>
 
-          {/* Data Table */}
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h3 className="font-semibold text-gray-800 mb-4">🗂️ Data Table</h3>
+            <h3 className="font-semibold text-gray-800 mb-4">
+              🗂️ Workout History
+            </h3>
 
             <div className="flex justify-between items-center mb-4">
               <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -127,69 +125,45 @@ export default function DashboardPage() {
               <table className="w-full text-sm text-left text-gray-600">
                 <thead className="border-b bg-gray-50">
                   <tr>
-                    <th className="px-4 py-3">Name</th>
-                    <th className="px-4 py-3">Position</th>
-                    <th className="px-4 py-3">Office</th>
-                    <th className="px-4 py-3">Age</th>
-                    <th className="px-4 py-3">Start Date</th>
-                    <th className="px-4 py-3">Salary</th>
+                    <th className="px-4 py-3">Date</th>
+                    <th className="px-4 py-3">Exercise</th>
+                    <th className="px-4 py-3">Duration</th>
+                    <th className="px-4 py-3">Sets</th>
+                    <th className="px-4 py-3">Reps</th>
+                    <th className="px-4 py-3">Calories</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b hover:bg-gray-50">
-                    <td className="px-4 py-3">James</td>
-                    <td className="px-4 py-3">Architect</td>
-                    <td className="px-4 py-3">Scotland</td>
-                    <td className="px-4 py-3">54</td>
-                    <td className="px-4 py-3">2003/04/26</td>
-                    <td className="px-4 py-3">$128,800</td>
+                    <td className="px-4 py-3">2025/01/20</td>
+                    <td className="px-4 py-3">Bench Press</td>
+                    <td className="px-4 py-3">45 mins</td>
+                    <td className="px-4 py-3">4</td>
+                    <td className="px-4 py-3">12</td>
+                    <td className="px-4 py-3">320</td>
                   </tr>
                   <tr className="border-b hover:bg-gray-50">
-                    <td className="px-4 py-3">Brock</td>
-                    <td className="px-4 py-3">Chartered Accountant</td>
-                    <td className="px-4 py-3">Germany</td>
-                    <td className="px-4 py-3">56</td>
-                    <td className="px-4 py-3">2003/02/23</td>
-                    <td className="px-4 py-3">$200,600</td>
+                    <td className="px-4 py-3">2025/01/19</td>
+                    <td className="px-4 py-3">Running</td>
+                    <td className="px-4 py-3">30 mins</td>
+                    <td className="px-4 py-3">-</td>
+                    <td className="px-4 py-3">-</td>
+                    <td className="px-4 py-3">280</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="px-4 py-3">Daniel</td>
-                    <td className="px-4 py-3">Software Engineer</td>
-                    <td className="px-4 py-3">Texas</td>
-                    <td className="px-4 py-3">60</td>
-                    <td className="px-4 py-3">2006/04/11</td>
-                    <td className="px-4 py-3">$78,000</td>
+                    <td className="px-4 py-3">2025/01/18</td>
+                    <td className="px-4 py-3">Deadlift</td>
+                    <td className="px-4 py-3">50 mins</td>
+                    <td className="px-4 py-3">5</td>
+                    <td className="px-4 py-3">8</td>
+                    <td className="px-4 py-3">400</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
-
-          {/* Modal Demo */}
-          <Button onClick={() => setIsModalOpen(true)}>Open Modal Demo</Button>
         </main>
       </div>
-
-      {/* Modal */}
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title="Example Modal"
-        footer={
-          <>
-            <Button variant="danger" onClick={() => setIsModalOpen(false)}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={() => setIsModalOpen(false)}>
-              Save Changes
-            </Button>
-          </>
-        }
-      >
-        <p className="text-gray-700">
-          This modal for testing this function will update this later.
-        </p>
-      </Modal>
     </>
   );
 }
