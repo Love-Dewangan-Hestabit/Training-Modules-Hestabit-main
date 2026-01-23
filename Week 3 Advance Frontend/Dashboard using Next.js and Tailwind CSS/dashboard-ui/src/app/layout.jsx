@@ -7,7 +7,11 @@ export const metadata = {
   },
   description:
     "FitBit helps you train smarter, stay consistent, and achieve your fitness goals.",
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {

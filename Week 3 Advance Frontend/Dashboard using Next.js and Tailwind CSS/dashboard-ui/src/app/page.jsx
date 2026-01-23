@@ -1,17 +1,21 @@
 "use client";
 
+import { useState } from "react";
 import NavbarHome from "@/components/ui/Navbar_Home";
 import Footer from "@/components/ui/Footer";
 import Testimonials from "@/components/ui/Testimonial";
 import Button from "@/components/ui/Button";
+import LoginModal from "@/components/ui/Login";
 import Image from "next/image";
 
 export default function HomePage() {
+  const [loginOpen, setLoginOpen] = useState(false);
+
   return (
     <>
       <NavbarHome />
 
-      <main className="pt-20 min-h-screen bg-white  overflow-hidden">
+      <main className="pt-20 min-h-screen bg-white overflow-hidden">
         <div className="relative">
           <Image
             src="/hero.png"
@@ -31,6 +35,7 @@ export default function HomePage() {
             <Button
               variant="tryForFree"
               size="lg"
+              onClick={() => setLoginOpen(true)}
               className="text-black font-sans font-semibold hover:bg-black hover:text-white"
             >
               Get Started
@@ -105,12 +110,12 @@ export default function HomePage() {
           <Image src="/banner3.png" alt="Running" width={1920} height={500} />
           <div className="absolute inset-0 bg-black/40" />
 
-          <div className="absolute inset-0 flex flex-col md:flex-row items-start md:items-center px-6 md:px-40 gap-8 md:gap-40">
+          <div className="absolute left-16 inset-0 flex flex-col md:flex-row items-start md:items-center px-6 md:px-40 gap-8 md:gap-40">
             <div>
-              <h1 className="font-sanstext-xl md:text-3xl text-white font-bold">
+              <h1 className="font-sans text-md md:text-3xl text-white font-bold">
                 FIND YOUR FIT
               </h1>
-              <p className="font-sans font-semibold text-white mt-2">
+              <p className="font-sans font-light text-sm md:font-semibold text-white mt-2">
                 Ready to improve your mind, body and spirit? Find your fitness
                 <br />
                 community today.
@@ -119,7 +124,8 @@ export default function HomePage() {
 
             <Button
               variant="joinToday"
-              className=" text-black font-semibold font-sans "
+              onClick={() => setLoginOpen(true)}
+              className="text-black font-semibold font-sans"
             >
               JOIN TODAY
             </Button>
@@ -128,6 +134,9 @@ export default function HomePage() {
       </main>
 
       <Footer />
+
+      {/* LOGIN MODAL */}
+      <LoginModal isOpen={loginOpen} onClose={() => setLoginOpen(false)} />
     </>
   );
 }
