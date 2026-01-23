@@ -12,9 +12,9 @@ export default function Button({
     primary: "rounded bg-blue-600 text-white hover:bg-blue-700",
 
     search:
-      "rounded bg-blue-600 px-3 py-2 text-sm rounded-l-none rounded-r hover:bg-blue-700",
+      "rounded bg-gray-400 px-3 py-2 text-sm rounded-l-none rounded-r hover:bg-blue-600",
 
-    hamBurger: "text-xl hover:bg-gray-600",
+    hamBurger: "text-xl hover:bg-gray-600 rounded",
 
     tryForFree: "rounded-full bg-white px-6 sm:px-10 md:px-12 py-3 md:py-4",
 
@@ -22,7 +22,9 @@ export default function Button({
       "rounded-md bg-black px-6 sm:px-10 md:px-12 py-3 md:py-4 hover:bg-gray-700",
 
     joinToday:
-      "bg-white px-10 sm:px-24 md:px-64 py-3 md:py-4 hover:bg-black hover:text-white border border-black",
+      "bg-white px-10 sm:px-24 md:px-64 py-3 md:py-4 hover:bg-black hover:text-white hover:border-1 border-white",
+
+    editProfile: "rounded bg-black text-white hover:bg-gray-500",
   };
 
   const sizes = {

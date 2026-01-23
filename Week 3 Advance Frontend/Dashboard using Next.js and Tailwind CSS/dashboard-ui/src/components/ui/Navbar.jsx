@@ -10,9 +10,19 @@ export default function Navbar({ toggleSidebar }) {
           ☰
         </Button>
 
-        <a href="/" className="font-semibold text-lg">
-          Fitbit
-        </a>
+        <div className="flex gap-1">
+          <Image
+            src="/running.png"
+            alt="Fitbit Logo"
+            width={25}
+            height={25}
+            className="invert"
+          />
+
+          <a href="/" className="font-bold font-sans text-xl">
+            FITBIT
+          </a>
+        </div>
         {/* <span href="/app" className="font-semibold text-lg">
           Fitbit
         </span> */}

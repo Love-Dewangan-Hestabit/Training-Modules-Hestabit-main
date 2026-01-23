@@ -6,12 +6,12 @@ export default function Card({
   className = "",
 }) {
   const variants = {
-    blue: "bg-blue-600 text-white",
+    gray1: "bg-gray-900 text-white",
 
-    yellow: "bg-yellow-500 text-white",
-    green: "bg-green-600 text-white",
+    gray2: "bg-gray-800 text-white",
+    gray3: "bg-gray-700 text-white",
 
-    red: "bg-red-600 text-white",
+    gray4: "bg-gray-600 text-white",
   };
 
   return (
