@@ -5,7 +5,7 @@
 
 ## Task
 
-In this task we created a basic Node.js project structure using Express.
+In this task I created a basic Node.js project structure using Express.
 The main goal was to understand how a project starts and how different parts
 like config, database, routes and logging are loaded step by step.
 
