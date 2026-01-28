@@ -28,8 +28,8 @@ TRAINING-MODULES-HESTABIT-MAIN/
 │ ├── Backend Project Directory/
 │ ├── Day 01 Node and Project Architecture/
 │ ├── Day 02 Database Modeling and Indexing and Advanced CRUD/
-│ ├── Day 03 /
-│ ├── Day 04 /
+│ ├── Day 03 High Performance Rest API and Advance Query Engine/
+│ ├── Day 04 Security, validation, rate limiting and Hardening/
 │ └── Day 05 Job Queues, Logging, API, Documentation and Capstone/
 │
 └── File Hierarchy.md
