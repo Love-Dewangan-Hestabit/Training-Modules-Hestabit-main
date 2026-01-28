@@ -2,3 +2,15 @@
 [2026-01-27T13:37:59.702Z] INFO: Database connected
 [2026-01-27T13:37:59.703Z] INFO: Routes mounted: 1 endpoints
 [2026-01-27T13:37:59.705Z] INFO: Server started on port 3000
+[2026-01-28T05:54:00.401Z] INFO: Middlewares loaded
+[2026-01-28T05:54:00.422Z] INFO: Database connected
+[2026-01-28T05:54:00.423Z] INFO: Routes mounted: 1 endpoints
+[2026-01-28T05:54:00.426Z] INFO: Server started on port 4000
+[2026-01-28T05:56:08.801Z] INFO: Middlewares loaded
+[2026-01-28T05:56:08.822Z] INFO: Database connected
+[2026-01-28T05:56:08.823Z] INFO: Routes mounted: 1 endpoints
+[2026-01-28T05:56:08.825Z] INFO: Server started on port 4000
+[2026-01-28T05:59:39.493Z] INFO: Middlewares loaded
+[2026-01-28T05:59:39.516Z] INFO: Database connected
+[2026-01-28T05:59:39.517Z] INFO: Routes mounted: 1 endpoints
+[2026-01-28T05:59:39.519Z] INFO: Server started on port 4000
