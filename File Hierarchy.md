@@ -24,5 +24,13 @@ TRAINING-MODULES-HESTABIT-MAIN/
 │ ├── Day 04 Dynamic UI and Image Optimization/
 │ └── Day 05  Capstone Mini Project (No backend)/
 │
+├── Week 4 Advance Backend Engineering/
+│ ├── Backend Project Directory/
+│ ├── Day 01 Node and Project Architecture/
+│ ├── Day 02 Database Modeling and Indexing and Advanced CRUD/
+│ ├── Day 03 /
+│ ├── Day 04 /
+│ └── Day 05 Job Queues, Logging, API, Documentation and Capstone/
+│
 └── File Hierarchy.md
 ```
