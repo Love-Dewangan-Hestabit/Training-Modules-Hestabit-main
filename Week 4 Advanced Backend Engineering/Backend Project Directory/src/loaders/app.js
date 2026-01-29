@@ -2,12 +2,15 @@ import express from "express";
 import config from "../config/index.js";
 import logger from "../utils/logger.js";
 import dbLoader from "./db.js";
+import errorMiddleware from "../middlewares/error.middleware.js";
 
 export default async function appLoader() {
   const app = express();
 
   app.use(express.json());
+
   logger.info("Middlewares loaded");
+  app.use(errorMiddleware);
 
   await dbLoader();
 

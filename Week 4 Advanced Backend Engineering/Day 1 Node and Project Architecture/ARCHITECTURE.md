@@ -1,4 +1,4 @@
-## Week 3 (Day 5) - Capstone Mini Project (No backend)
+## Week 4 (Day 1) - NODE and PROJECT ARCHITECTURE
 
 **Name: Love Dewangan**  
 **Email: love.dewangan@hestabit.in**
