@@ -3,7 +3,9 @@ import productService from "../services/product.service.js";
 class ProductController {
   async getProducts(req, res, next) {
     try {
-      const products = await productService.getProducts(req.query);
+      const products = await productService.getProducts(
+        req.validatedQuery || req.query,
+      );
       res.json({ success: true, data: products });
     } catch (err) {
       next(err);
