@@ -1,9 +1,16 @@
 import { Router } from "express";
 import productController from "../controllers/product.controller.js";
+import validate from "../middlewares/validate.js";
+import { productQuerySchema } from "../validations/product.validation.js";
 
 const router = Router();
 
-router.get("/products", productController.getProducts);
+router.get(
+  "/products",
+  validate(productQuerySchema, "query"),
+  productController.getProducts,
+);
+
 router.delete("/products/:id", productController.deleteProduct);
 
 export default router;
