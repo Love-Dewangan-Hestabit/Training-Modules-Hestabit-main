@@ -3,22 +3,23 @@ import config from "../config/index.js";
 import logger from "../utils/logger.js";
 import dbLoader from "./db.js";
 import errorMiddleware from "../middlewares/error.middleware.js";
+import { securityMiddleware } from "../middlewares/security.js";
 
 export default async function appLoader() {
   const app = express();
 
-  app.use(express.json());
+  app.use(express.json({ limit: "10kb" }));
+
+  securityMiddleware(app);
 
   logger.info("Middlewares loaded");
-  app.use(errorMiddleware);
 
   await dbLoader();
 
-  const routes = (await import("../routes/index.js")).default;
-  app.use("/api", routes);
+  const routesModule = await import("../routes/index.js");
+  app.use("/api", routesModule.default);
 
-  const routeCount = routes.stack.filter((layer) => layer.route).length;
-  logger.info(`Routes mounted: ${routeCount} endpoints`);
+  app.use(errorMiddleware);
 
   app.listen(config.port, () => {
     logger.info(`Server started on port ${config.port}`);
