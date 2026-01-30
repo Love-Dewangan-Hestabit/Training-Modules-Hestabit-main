@@ -1,8 +1,13 @@
 import productRepository from "../repositories/product.repository.js";
 import AppError from "../utils/AppError.js";
+import logger from "../utils/logger.js";
 
 class ProductService {
-  async getProducts(query) {
+  async getProducts(query, requestId) {
+    logger.info("ProductService: building product query", {
+      requestId,
+    });
+
     const {
       search,
       minPrice,
@@ -35,6 +40,13 @@ class ProductService {
       sortObj = { [field]: order === "desc" ? -1 : 1 };
     }
 
+    logger.info("ProductService: fetching products from repository", {
+      requestId,
+      filter,
+      sort: sortObj,
+      limit,
+    });
+
     return productRepository.findMany({
       filter,
       sort: sortObj,
@@ -42,10 +54,19 @@ class ProductService {
     });
   }
 
-  async deleteProduct(id) {
+  async deleteProduct(id, requestId) {
+    logger.info("ProductService: deleting product", {
+      requestId,
+      productId: id,
+    });
+
     const product = await productRepository.findById(id);
 
     if (!product) {
+      logger.warn("ProductService: product not found", {
+        requestId,
+        productId: id,
+      });
       throw new AppError("Product not found", "PRODUCT_NOT_FOUND", 404);
     }
 
