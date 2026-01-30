@@ -11,6 +11,8 @@ router.get(
   productController.getProducts,
 );
 
+router.post("/products/notify", productController.notifyProduct);
+
 router.delete("/products/:id", productController.deleteProduct);
 
 export default router;
