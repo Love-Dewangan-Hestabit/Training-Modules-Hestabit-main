@@ -1,0 +1,93 @@
+[2026-01-27T13:37:59.681Z] INFO: Middlewares loaded
+[2026-01-27T13:37:59.702Z] INFO: Database connected
+[2026-01-27T13:37:59.703Z] INFO: Routes mounted: 1 endpoints
+[2026-01-27T13:37:59.705Z] INFO: Server started on port 3000
+[2026-01-28T06:00:52.364Z] INFO: Middlewares loaded
+[2026-01-28T06:00:52.385Z] INFO: Database connected
+[2026-01-28T06:00:52.386Z] INFO: Routes mounted: 1 endpoints
+[2026-01-28T06:00:52.387Z] INFO: Server started on port 4000
+[2026-01-28T06:53:27.086Z] INFO: Middlewares loaded
+[2026-01-28T06:53:27.110Z] INFO: Database connected
+[2026-01-28T06:53:27.111Z] INFO: Routes mounted: 1 endpoints
+[2026-01-28T06:53:27.112Z] INFO: Server started on port 3000
+[2026-01-28T10:15:36.765Z] INFO: Middlewares loaded
+[2026-01-28T10:15:36.787Z] INFO: Database connected
+[2026-01-28T10:15:36.788Z] INFO: Routes mounted: 1 endpoints
+[2026-01-28T10:15:36.790Z] INFO: Server started on port 3000
+[2026-01-28T10:16:36.210Z] INFO: Middlewares loaded
+[2026-01-28T10:16:36.231Z] INFO: Database connected
+[2026-01-28T10:16:36.232Z] INFO: Routes mounted: 1 endpoints
+[2026-01-28T10:16:36.234Z] INFO: Server started on port 3000
+[2026-01-28T10:17:55.423Z] INFO: Middlewares loaded
+[2026-01-28T10:17:55.448Z] INFO: Database connected
+[2026-01-28T10:17:55.449Z] INFO: Routes mounted: 1 endpoints
+[2026-01-28T10:17:55.450Z] INFO: Server started on port 3000
+[2026-01-29T08:08:11.514Z] INFO: Middlewares loaded
+[2026-01-29T08:08:11.535Z] INFO: Database connected
+[2026-01-29T08:08:11.544Z] INFO: Routes mounted: 1 endpoints
+[2026-01-29T08:08:11.546Z] INFO: Server started on port 3000
+[2026-01-29T08:09:14.711Z] INFO: Middlewares loaded
+[2026-01-29T08:09:14.733Z] INFO: Database connected
+[2026-01-29T08:09:14.741Z] INFO: Routes mounted: 1 endpoints
+[2026-01-29T08:09:14.743Z] INFO: Server started on port 3000
+[2026-01-29T08:10:41.381Z] INFO: Middlewares loaded
+[2026-01-29T08:10:41.402Z] INFO: Database connected
+[2026-01-29T08:10:41.410Z] INFO: Routes mounted: 1 endpoints
+[2026-01-29T08:10:41.412Z] INFO: Server started on port 3000
+[2026-01-29T13:57:20.722Z] INFO: Middlewares loaded
+[2026-01-29T13:57:20.749Z] INFO: Database connected
+[2026-01-29T13:57:20.784Z] INFO: Server started on port 3000
+[2026-01-29T14:02:56.672Z] INFO: Middlewares loaded
+[2026-01-29T14:02:56.698Z] INFO: Database connected
+[2026-01-29T14:02:56.738Z] INFO: Server started on port 3000
+[2026-01-29T14:10:04.177Z] INFO: Middlewares loaded
+[2026-01-29T14:10:04.199Z] INFO: Database connected
+[2026-01-29T14:10:04.234Z] INFO: Server started on port 3000
+[2026-01-29T14:12:01.509Z] INFO: Middlewares loaded
+[2026-01-29T14:12:01.532Z] INFO: Database connected
+[2026-01-29T14:12:01.567Z] INFO: Server started on port 3000
+[2026-01-29T14:16:10.112Z] INFO: Middlewares loaded
+[2026-01-29T14:16:10.137Z] INFO: Database connected
+[2026-01-29T14:16:10.172Z] INFO: Server started on port 3000
+[2026-01-29T14:17:38.741Z] INFO: Middlewares loaded
+[2026-01-29T14:17:38.768Z] INFO: Database connected
+[2026-01-29T14:17:38.804Z] INFO: Server started on port 3000
+[2026-01-29T14:21:02.651Z] INFO: Middlewares loaded
+[2026-01-29T14:21:02.676Z] INFO: Database connected
+[2026-01-29T14:22:05.555Z] INFO: Middlewares loaded
+[2026-01-29T14:22:05.578Z] INFO: Database connected
+[2026-01-29T14:22:05.613Z] INFO: Server started on port 3000
+[2026-01-29T17:09:52.266Z] INFO: Middlewares loaded
+[2026-01-29T17:09:52.288Z] INFO: Database connected
+[2026-01-29T17:09:52.330Z] INFO: Server started on port 3000
+[2026-01-29T17:10:09.980Z] INFO: Middlewares loaded
+[2026-01-29T17:10:10.004Z] INFO: Database connected
+[2026-01-29T17:10:10.041Z] INFO: Server started on port 3000
+[2026-01-29T17:20:38.714Z] INFO: Middlewares loaded
+[2026-01-29T17:20:38.737Z] INFO: Database connected
+[2026-01-29T17:20:38.773Z] INFO: Server started on port 3000
+[2026-01-29T17:25:36.651Z] INFO: Middlewares loaded
+[2026-01-29T17:25:36.676Z] INFO: Database connected
+[2026-01-29T17:25:36.719Z] INFO: Server started on port 3000
+[2026-01-30T05:57:24.091Z] INFO: Middlewares loaded
+[2026-01-30T05:57:24.112Z] INFO: Database connected
+[2026-01-30T05:57:38.134Z] INFO: Middlewares loaded
+[2026-01-30T05:57:38.159Z] INFO: Database connected
+[2026-01-30T05:57:52.123Z] INFO: Middlewares loaded
+[2026-01-30T05:57:52.145Z] INFO: Database connected
+[2026-01-30T06:02:50.610Z] INFO: Middlewares loaded
+[2026-01-30T06:02:50.633Z] INFO: Database connected
+[2026-01-30T06:03:24.947Z] INFO: Middlewares loaded
+[2026-01-30T06:03:24.972Z] INFO: Database connected
+[2026-01-30T06:03:25.076Z] INFO: Server started on port 3000
+[2026-01-30T06:03:51.696Z] INFO: Email notification job queued
+[2026-01-30T06:03:51.701Z] INFO: [JOB:1] Sending email to user@example.com | Subject: Product Notification
+[2026-01-30T06:03:53.708Z] ERROR: [JOB:1] Failed: Simulated email failure
+[2026-01-30T06:18:39.868Z] INFO: Fetching products
+[2026-01-30T06:29:03.636Z] INFO: Fetching products
+[2026-01-30T06:31:43.742Z] INFO: Deleting product
+[2026-01-30T06:32:50.756Z] INFO: Deleting product
+[2026-01-30T06:38:36.777Z] INFO: Email notification job queued
+[2026-01-30T06:38:36.777Z] INFO: [JOB:2] Sending email to user@example.com | Subject: Product Notification
+[2026-01-30T06:38:38.778Z] INFO: [JOB:2] Email sent successfully
+[2026-01-30T06:38:38.781Z] INFO: [JOB:2] Completed
