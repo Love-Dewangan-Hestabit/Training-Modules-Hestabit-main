@@ -1,3 +1,0 @@
-[dotenv@17.2.3] injecting env (3) from .env.local -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
-[2026-01-30T05:57:24.091Z] INFO: Middlewares loaded
-[2026-01-30T05:57:24.112Z] INFO: Database connected

@@ -69,3 +69,25 @@
 [2026-01-29T17:25:36.651Z] INFO: Middlewares loaded
 [2026-01-29T17:25:36.676Z] INFO: Database connected
 [2026-01-29T17:25:36.719Z] INFO: Server started on port 3000
+[2026-01-30T05:57:24.091Z] INFO: Middlewares loaded
+[2026-01-30T05:57:24.112Z] INFO: Database connected
+[2026-01-30T05:57:38.134Z] INFO: Middlewares loaded
+[2026-01-30T05:57:38.159Z] INFO: Database connected
+[2026-01-30T05:57:52.123Z] INFO: Middlewares loaded
+[2026-01-30T05:57:52.145Z] INFO: Database connected
+[2026-01-30T06:02:50.610Z] INFO: Middlewares loaded
+[2026-01-30T06:02:50.633Z] INFO: Database connected
+[2026-01-30T06:03:24.947Z] INFO: Middlewares loaded
+[2026-01-30T06:03:24.972Z] INFO: Database connected
+[2026-01-30T06:03:25.076Z] INFO: Server started on port 3000
+[2026-01-30T06:03:51.696Z] INFO: Email notification job queued
+[2026-01-30T06:03:51.701Z] INFO: [JOB:1] Sending email to user@example.com | Subject: Product Notification
+[2026-01-30T06:03:53.708Z] ERROR: [JOB:1] Failed: Simulated email failure
+[2026-01-30T06:18:39.868Z] INFO: Fetching products
+[2026-01-30T06:29:03.636Z] INFO: Fetching products
+[2026-01-30T06:31:43.742Z] INFO: Deleting product
+[2026-01-30T06:32:50.756Z] INFO: Deleting product
+[2026-01-30T06:38:36.777Z] INFO: Email notification job queued
+[2026-01-30T06:38:36.777Z] INFO: [JOB:2] Sending email to user@example.com | Subject: Product Notification
+[2026-01-30T06:38:38.778Z] INFO: [JOB:2] Email sent successfully
+[2026-01-30T06:38:38.781Z] INFO: [JOB:2] Completed
