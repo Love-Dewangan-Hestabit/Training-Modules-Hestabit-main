@@ -91,3 +91,9 @@
 [2026-01-30T06:38:36.777Z] INFO: [JOB:2] Sending email to user@example.com | Subject: Product Notification
 [2026-01-30T06:38:38.778Z] INFO: [JOB:2] Email sent successfully
 [2026-01-30T06:38:38.781Z] INFO: [JOB:2] Completed
+[2026-02-01T16:10:46.767Z] INFO Middlewares loaded
+[2026-02-01T16:10:46.789Z] INFO Database connected
+[2026-02-01T16:10:46.929Z] INFO Server started on port 3000
+[2026-02-01T16:10:57.602Z] INFO [4a9ca643-eff4-470e-a622-22d5619cd252] Controller: getProducts called
+[2026-02-01T16:10:57.603Z] INFO [4a9ca643-eff4-470e-a622-22d5619cd252] ProductService: building product query
+[2026-02-01T16:10:57.603Z] INFO [4a9ca643-eff4-470e-a622-22d5619cd252] ProductService: fetching products from repository

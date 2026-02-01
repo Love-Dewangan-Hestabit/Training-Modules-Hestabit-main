@@ -46,6 +46,13 @@ When you install redis the redis server start automatically.
 
 `NODE_ENV=local node src/index.js`
 
+**Additionally for Tracing the request**<br>
+
+`curl -i http://localhost:3000/api/products`
+
+Request Tracing -
+![Tracing](./screenshots/Request_Tracing.png)
+
 **Background Jobs using BullMQ**<br>
 
 - Background jobs are handled using BullMQ
@@ -64,13 +71,16 @@ To manually trigger a background job:<br>
   `http://localhost:3000`
 - Now start testing the APIs using GET, POST, DELETE(SoftDelete for this API).
 
-GET -
+Method - GET:<br>
+URL - {{BASE_URL}}/api/products
 ![GET Request](./screenshots/Postman_GET.png)
 
-POST -
+Method - POST:<br>
+URL - {{BASE_URL}}/api/products/notify
 ![POST Request](./screenshots/Postman_Post.png)
 
-DELETE -
+Method - DELETE:<br>
+URL - {{BASE_URL}}/api/products/:id
 ![DELETE Request](./screenshots/Postman_Delete.png)
 
 **Production Deployment (PM2)**

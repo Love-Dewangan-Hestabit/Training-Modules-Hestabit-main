@@ -4,9 +4,12 @@ import logger from "../utils/logger.js";
 import dbLoader from "./db.js";
 import errorMiddleware from "../middlewares/error.middleware.js";
 import { securityMiddleware } from "../middlewares/security.js";
+import tracingMiddleware from "../utils/tracing.js";
 
 export default async function appLoader() {
   const app = express();
+
+  app.use(tracingMiddleware);
 
   app.use(express.json({ limit: "10kb" }));
 
