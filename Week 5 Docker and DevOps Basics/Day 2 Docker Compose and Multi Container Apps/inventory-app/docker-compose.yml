@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - /home/lovedewangan/mongo-data:/data/db
+
+  server:
+    build: ./server
+    container_name: server
+    ports:
+      - "5000:5000"
+    environment:
+      MONGO_URI: mongodb://mongo:27017/inventory
+    depends_on:
+      - mongo
+
+  client:
+    build: ./ui
+    container_name: react-ui
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+
+volumes:
+  mongo-data:
