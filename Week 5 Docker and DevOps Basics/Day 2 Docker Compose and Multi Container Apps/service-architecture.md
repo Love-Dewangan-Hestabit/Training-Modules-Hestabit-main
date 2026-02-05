@@ -1,4 +1,4 @@
-# Week 5 (Day 1) - Server Side Foundations with Docker & DevOps Basics
+# Week 5 (Day 2) - Docker Compose and Multi Container Apps
 
 **Name: Love Dewangan**  
 **Email: love.dewangan@hestabit.in**
