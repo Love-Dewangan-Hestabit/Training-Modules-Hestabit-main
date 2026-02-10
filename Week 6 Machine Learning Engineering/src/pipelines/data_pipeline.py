@@ -7,7 +7,7 @@ import os
 RAW_PATH = "src/data/raw/WA_Fn-UseC_-HR-Employee-Attrition.csv"
 PROCESSED_PATH = "src/data/processed/final.csv"
 
-print("📥 Loading data...")
+print("Loading data...")
 df = pd.read_csv(RAW_PATH)
 print("Initial shape:", df.shape)
 
@@ -64,5 +64,5 @@ df[numeric_cols] = scaler.fit_transform(df[numeric_cols])
 os.makedirs("src/data/processed", exist_ok=True)
 df.to_csv(PROCESSED_PATH, index=False)
 
-print("✅ Day 1 pipeline completed successfully")
+print("Day 1 pipeline completed successfully")
 print("Final shape:", df.shape)
