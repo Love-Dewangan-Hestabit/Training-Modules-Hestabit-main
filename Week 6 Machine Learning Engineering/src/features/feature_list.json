@@ -1,0 +1,22 @@
+[
+    "YearsSinceLastPromotion",
+    "Gender_Female",
+    "ManagerStability",
+    "JobLevel",
+    "MaritalStatus_Single",
+    "EducationField_Life Sciences",
+    "RoleStability",
+    "WorkLifeInteraction",
+    "OverTime_No",
+    "TotalWorkingYears",
+    "EducationField_Other",
+    "MaritalStatus_Divorced",
+    "EducationField_Medical",
+    "BusinessTravel_Travel_Rarely",
+    "JobInvolvement",
+    "YearsAtCompany",
+    "JobRole_Manager",
+    "RelationshipSatisfaction",
+    "TenureRatio",
+    "MaritalStatus_Married"
+]
