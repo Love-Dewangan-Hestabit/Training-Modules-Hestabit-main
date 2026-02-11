@@ -47,19 +47,6 @@ df = df[(z_scores < 3).all(axis=1)]
 print("Shape after outlier removal:", df.shape)
 
 
-
-print("⚖ Scaling numerical features...")
-
-numeric_cols = df.select_dtypes(include=["int64", "float64"]).columns
-
-if df.shape[0] == 0:
-    raise ValueError("Dataset became empty after cleaning. Check outlier logic.")
-
-scaler = StandardScaler()
-df[numeric_cols] = scaler.fit_transform(df[numeric_cols])
-
-
-
 os.makedirs("src/data/processed", exist_ok=True)
 df.to_csv(PROCESSED_PATH, index=False)
 
