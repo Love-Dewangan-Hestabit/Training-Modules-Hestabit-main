@@ -24,45 +24,45 @@ No scaling or encoding was performed in Day 1 to avoid data leakage.
 
 The following new features were created:
 
-## (1) IncomePerYear
-
-MonthlyIncome \* 12 / (TotalWorkingYears + 1)
-
-## (2) TenureRatio
+## (1) TenureRatio
 
 YearsAtCompany / (TotalWorkingYears + 1)
 
-## (3) PromotionGap
+## (2) PromotionWaitRatio
 
-YearsAtCompany - YearsSinceLastPromotion
+YearsSinceLastPromotion / (YearsAtCompany + 1)
 
-## (4) ExperienceLevel
+## (3) IncomePerYear
 
-Binary flag: 1 if TotalWorkingYears \> 10 else 0
+MonthlyIncome \* 12
+
+## (4) CareerProgressionRatio
+
+YearsInCurrentRole / (TotalWorkingYears + 1)
 
 ## (5) IncomeStability
 
 MonthlyIncome / (Age + 1)
 
-## (6) RoleStability
+## (6) LongCommute
 
-YearsInCurrentRole / (YearsAtCompany + 1)
+Binary flag: 1 if DistanceFromHome > median(DistanceFromHome) else 0
 
-## (7) ManagerStability
+## (7) LowSatisfaction
 
-YearsWithCurrManager / (YearsAtCompany + 1)
+Binary flag: 1 if JobSatisfaction ≤ 2 OR EnvironmentSatisfaction ≤ 2 else 0
 
-## (8) FarFromOffice
+## (8) LowWorkLifeBalance
 
-Binary flag: 1 if DistanceFromHome \> 20 else 0
+Binary flag: 1 if WorkLifeBalance ≤ 2 else 0
 
-## (9) WorkLifeInteraction
+## (9) EarlyCareer
 
-JobSatisfaction \* EnvironmentSatisfaction
+Binary flag: 1 if TotalWorkingYears < 5 else 0
 
-## (10) LogDistanceFromHome
+## (10) ManagerChangeRisk
 
-log1p(DistanceFromHome - min + 1)
+Binary flag: 1 if YearsWithCurrManager < 2 else 0
 
 ## Train/Test Split
 

@@ -21,19 +21,37 @@ df = pd.read_csv(DATA_PATH)
 
 print("Generating new features...")
 
-df["IncomePerYear"] = df["MonthlyIncome"] * 12 / (df["TotalWorkingYears"] + 1)
 df["TenureRatio"] = df["YearsAtCompany"] / (df["TotalWorkingYears"] + 1)
-df["PromotionGap"] = df["YearsAtCompany"] - df["YearsSinceLastPromotion"]
-df["ExperienceLevel"] = np.where(df["TotalWorkingYears"] > 10, 1, 0)
+
+df["PromotionWaitRatio"] = (
+    df["YearsSinceLastPromotion"] / (df["YearsAtCompany"] + 1)
+)
+
+df["IncomePerYear"] = df["MonthlyIncome"] * 12
+
+df["CareerProgressionRatio"] = (
+    df["YearsInCurrentRole"] /
+    (df["TotalWorkingYears"] + 1)
+)
+
 df["IncomeStability"] = df["MonthlyIncome"] / (df["Age"] + 1)
-df["RoleStability"] = df["YearsInCurrentRole"] / (df["YearsAtCompany"] + 1)
-df["ManagerStability"] = df["YearsWithCurrManager"] / (df["YearsAtCompany"] + 1)
-df["FarFromOffice"] = np.where(df["DistanceFromHome"] > 20, 1, 0)
-df["WorkLifeInteraction"] = df["JobSatisfaction"] * df["EnvironmentSatisfaction"]
 
-min_val = df["DistanceFromHome"].min()
-df["LogDistanceFromHome"] = np.log1p(df["DistanceFromHome"] - min_val + 1)
+df["LongCommute"] = (
+    df["DistanceFromHome"] > df["DistanceFromHome"].median()
+).astype(int)
 
+df["LowSatisfaction"] = (
+    (df["JobSatisfaction"] <= 2) |
+    (df["EnvironmentSatisfaction"] <= 2)
+).astype(int)
+
+df["LowWorkLifeBalance"] = (df["WorkLifeBalance"] <= 2).astype(int)
+
+df["EarlyCareer"] = (df["TotalWorkingYears"] < 5).astype(int)
+
+df["ManagerChangeRisk"] = (
+    df["YearsWithCurrManager"] < 2
+).astype(int)
 
 
 X = df.drop("Attrition", axis=1)
