@@ -39,5 +39,12 @@ TRAINING-MODULES-HESTABIT-MAIN/
 │ ├── Day 04 SSL, Self-Signed, mkcert and HTTPS/
 │ └── Day 05 CI-style Deployment Automation and Capstone/
 │
+├── Week 6 Machine Learning Engineering/
+│ ├── Day 01 Data Pipeline, EDA, Project and Architecture/
+│ ├── Day 02 Feature Engineering and Feature Selection/
+│ ├── Day 03 Model Building and Advanced Training Pipeline/
+│ ├── Day 04 HyperParameter Tuning, Explainability and Error Analysis/
+│ └── Day 05 Model Deployment, Monitoring and MLOPS Concepts/
+│
 └── File Hierarchy.md
 ```

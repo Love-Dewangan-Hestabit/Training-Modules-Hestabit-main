@@ -12,7 +12,6 @@ df = pd.read_csv(RAW_PATH)
 print("Initial shape:", df.shape)
 
 
-# Handle missing values (SAFE)
 print("Handling missing values...")
 for col in df.columns:
     if df[col].dtype in ["int64", "float64"]:
@@ -21,12 +20,12 @@ for col in df.columns:
         df[col] = df[col].fillna(df[col].mode()[0])
 
 
-# Remove duplicates
+
 print("Removing duplicates...")
 df = df.drop_duplicates()
 
 
-# Outlier removal (ONLY continuous columns)
+
 print("Removing outliers (continuous features only)...")
 
 continuous_cols = [
@@ -48,7 +47,7 @@ df = df[(z_scores < 3).all(axis=1)]
 print("Shape after outlier removal:", df.shape)
 
 
-# Scaling numerical features
+
 print("⚖ Scaling numerical features...")
 
 numeric_cols = df.select_dtypes(include=["int64", "float64"]).columns
@@ -60,7 +59,7 @@ scaler = StandardScaler()
 df[numeric_cols] = scaler.fit_transform(df[numeric_cols])
 
 
-# Save cleaned data
+
 os.makedirs("src/data/processed", exist_ok=True)
 df.to_csv(PROCESSED_PATH, index=False)
 
