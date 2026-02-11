@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from scipy.stats import zscore
 import os
 
-RAW_PATH = "src/data/raw/WA_Fn-UseC_-HR-Employee-Attrition.csv"
+RAW_PATH = "src/data/raw/Raw.csv"
 PROCESSED_PATH = "src/data/processed/final.csv"
 
 print("Loading data...")
