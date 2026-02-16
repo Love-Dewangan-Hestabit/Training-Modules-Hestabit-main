@@ -5,14 +5,16 @@ import optuna
 import numpy as np
 import pandas as pd
 
+from datetime import datetime
 from sklearn.model_selection import StratifiedKFold, cross_val_score
-from sklearn.metrics import roc_auc_score
 from xgboost import XGBClassifier
+
 
 FEATURE_DIR = "src/features"
 MODEL_DIR = "src/models"
 TUNING_DIR = "src/tuning"
 
+os.makedirs(MODEL_DIR, exist_ok=True)
 os.makedirs(TUNING_DIR, exist_ok=True)
 
 print("Loading training data...")
@@ -25,6 +27,7 @@ if y_train.dtype == object:
 
 cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
+
 def objective(trial):
 
     params = {
@@ -36,8 +39,7 @@ def objective(trial):
         "gamma": trial.suggest_float("gamma", 0, 5),
         "reg_lambda": trial.suggest_float("reg_lambda", 0, 10),
         "eval_metric": "logloss",
-        "random_state": 42,
-        "use_label_encoder": False
+        "random_state": 42
     }
 
     model = XGBClassifier(**params)
@@ -52,6 +54,7 @@ def objective(trial):
 
     return scores.mean()
 
+
 print("Starting Optuna tuning...")
 
 study = optuna.create_study(direction="maximize")
@@ -59,6 +62,7 @@ study.optimize(objective, n_trials=30)
 
 print("Best ROC-AUC:", study.best_value)
 print("Best Parameters:", study.best_params)
+
 
 
 best_model = XGBClassifier(
@@ -69,8 +73,21 @@ best_model = XGBClassifier(
 
 best_model.fit(X_train, y_train)
 
+
 joblib.dump(best_model, os.path.join(MODEL_DIR, "tuned_model.pkl"))
 
+metadata = {
+    "model_version": "1.0.0",
+    "trained_at": datetime.now().isoformat(),
+    "algorithm": "XGBoost",
+    "best_cv_roc_auc": study.best_value,
+    "features": list(X_train.columns)
+}
+
+with open(os.path.join(MODEL_DIR, "model_metadata.json"), "w") as f:
+    json.dump(metadata, f, indent=4)
+
+print("Model metadata saved successfully.")
 
 results = {
     "best_score_cv_roc_auc": study.best_value,
