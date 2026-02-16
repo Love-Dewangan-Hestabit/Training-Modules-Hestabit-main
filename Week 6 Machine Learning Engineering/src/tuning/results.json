@@ -1,12 +1,12 @@
 {
-    "best_score_cv_roc_auc": 0.812286032763365,
+    "best_score_cv_roc_auc": 0.8109485640828273,
     "best_parameters": {
-        "n_estimators": 173,
-        "max_depth": 6,
-        "learning_rate": 0.10753120900350466,
-        "subsample": 0.6415979472998122,
-        "colsample_bytree": 0.7781871489311721,
-        "gamma": 3.903498799096012,
-        "reg_lambda": 4.115496545164123
+        "n_estimators": 290,
+        "max_depth": 4,
+        "learning_rate": 0.09152819604377235,
+        "subsample": 0.6965566266582168,
+        "colsample_bytree": 0.6645775004235858,
+        "gamma": 1.5071633327842513,
+        "reg_lambda": 9.055400080604386
     }
 }

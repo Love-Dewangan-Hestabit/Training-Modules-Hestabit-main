@@ -1,0 +1,28 @@
+{
+    "model_version": "1.0.0",
+    "trained_at": "2026-02-16T03:30:53.986050",
+    "algorithm": "XGBoost",
+    "best_cv_roc_auc": 0.8109485640828273,
+    "features": [
+        "YearsSinceLastPromotion",
+        "Gender_Female",
+        "ManagerStability",
+        "JobLevel",
+        "MaritalStatus_Single",
+        "EducationField_Life Sciences",
+        "RoleStability",
+        "WorkLifeInteraction",
+        "OverTime_No",
+        "TotalWorkingYears",
+        "EducationField_Other",
+        "MaritalStatus_Divorced",
+        "EducationField_Medical",
+        "BusinessTravel_Travel_Rarely",
+        "JobInvolvement",
+        "YearsAtCompany",
+        "JobRole_Manager",
+        "RelationshipSatisfaction",
+        "TenureRatio",
+        "MaritalStatus_Married"
+    ]
+}
