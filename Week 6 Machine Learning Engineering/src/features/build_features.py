@@ -120,5 +120,5 @@ X_test_selected.to_csv(os.path.join(OUTPUT_DIR, "X_test.csv"), index=False)
 y_train.to_csv(os.path.join(OUTPUT_DIR, "y_train.csv"), index=False)
 y_test.to_csv(os.path.join(OUTPUT_DIR, "y_test.csv"), index=False)
 
-print("Leakage-free Day 2 pipeline completed successfully!")
+print("Pipeline completed successfully!")
 print("Final selected feature count:", len(selected_features))
