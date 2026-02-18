@@ -46,5 +46,12 @@ TRAINING-MODULES-HESTABIT-MAIN/
 │ ├── Day 04 HyperParameter Tuning, Explainability and Error Analysis/
 │ └── Day 05 Model Deployment, Monitoring and MLOPS Concepts/
 │
+├── Week 7 GenAI and Multimodal RAG Engineering/
+│ ├── Day 01 Local Rag System and Pipeline Architecture/
+│ ├── Day 02 Advanced Retrieval and Context Engineering/
+│ ├── Day 03 Image Rag (Multimodal Rag)/
+│ ├── Day 04 SQL Question Answering System/
+│ └── Day 05 Advanced Rag, Memory and Evaluation/
+│
 └── File Hierarchy.md
 ```
