@@ -15,7 +15,7 @@ class QueryEngine:
 
         self.embedder = Embedder()
 
-    def query(self, question, top_k=3):
+    def query(self, question, top_k=5):
         query_embedding = self.embedder.embed([question])
 
         distances, indices = self.index.search(query_embedding, top_k)
