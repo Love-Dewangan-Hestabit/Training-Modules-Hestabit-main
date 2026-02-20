@@ -1,5 +1,10 @@
 /venv
 
+*__pycache__/
+
 Day 1 Local Rag System and Pipeline Architecture/src
 
 Day 2 Advanced Retrieval and Context Engineering/src
+
+Day 3 Image Rag (Multimodal Rag)/src
+
