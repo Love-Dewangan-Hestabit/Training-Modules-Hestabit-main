@@ -18,10 +18,11 @@ class HybridImageSearch:
             self.metadata = json.load(f)
 
         self.corpus = [
-            doc["ocr_text"].lower().split()
+            (doc["ocr_text"] + " " + doc["caption"]).lower().split()
             for doc in self.metadata
         ]
         self.bm25 = BM25Okapi(self.corpus)
+
 
     def deduplicate(self, results):
         seen = set()
@@ -35,6 +36,7 @@ class HybridImageSearch:
 
         return unique
 
+
     def save_results(self, results, filename):
         with open(filename, "w", encoding="utf-8") as f:
             for i, res in enumerate(results):
@@ -44,11 +46,14 @@ class HybridImageSearch:
                 f.write(f"OCR Text:\n{res['ocr_text']}\n")
                 f.write("-" * 60 + "\n")
 
+
     def text_to_image(self, query, top_k=5):
 
         query_embedding = self.embedder.embed_text(query)
+
         clip_scores, indices = self.index.search(
-            query_embedding.astype("float32"), len(self.metadata)
+            query_embedding.astype("float32"),
+            len(self.metadata)
         )
 
         clip_scores = clip_scores[0]
@@ -74,19 +79,40 @@ class HybridImageSearch:
 
             results.append(doc_copy)
 
-        results = sorted(
-            results,
-            key=lambda x: x["hybrid_score"],
-            reverse=True
-        )
-
+        results = sorted(results, key=lambda x: x["hybrid_score"], reverse=True)
         results = self.deduplicate(results)
 
         final = results[:top_k]
-
         self.save_results(final, "text_to_image_results.txt")
 
         return final
+
+    def image_to_image(self, image_path, top_k=5):
+
+        query_embedding = self.embedder.embed_image(image_path)
+
+        scores, indices = self.index.search(
+            query_embedding.astype("float32"),
+            top_k
+        )
+
+        results = [self.metadata[i] for i in indices[0]]
+        results = self.deduplicate(results)
+
+        self.save_results(results, "image_to_image_results.txt")
+
+        return results
+
+
+    def image_to_text(self, image_path, top_k=3):
+
+        similar_images = self.image_to_image(image_path, top_k)
+
+        self.save_results(similar_images, "image_to_text_results.txt")
+
+        return similar_images
+
+
 
 
 if __name__ == "__main__":
@@ -97,3 +123,14 @@ if __name__ == "__main__":
     if mode == "text":
         query = input("Enter query: ")
         search.text_to_image(query)
+
+    elif mode == "image":
+        path = input("Enter image path: ")
+
+        submode = input("Type 'ItoI' for Image→Image or 'ItoT' for Image→Text: ")
+
+        if submode == "ItoI":
+            search.image_to_image(path)
+
+        elif submode == "ItoT":
+            search.image_to_text(path)
