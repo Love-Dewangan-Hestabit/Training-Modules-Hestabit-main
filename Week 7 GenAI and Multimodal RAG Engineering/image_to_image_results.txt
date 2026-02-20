@@ -1,0 +1,79 @@
+Result 1
+Image: src/data/images/8.jpg
+Caption: bar graph template for info design, info, info, info, info, info, info, info
+OCR Text:
+2016 2017 2018 2019
+
+2015
+
+BAR GRAPH INFOGRAPHIC TEMPLATE
+
+LOREM IPSUM. Lorem ipsum dolor sit amet consectetur adipisicing elit
+DOLOR SIT AMET Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod
+CONSECTETUR Lorem ipsum dolor sit amet consectetur
+a ae
+
+ADIPISICING ELIT Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+ee
+
+SED DO EIUSMOD Lorem ipsum dolor sit amet consectetur
+a a el
+
+------------------------------------------------------------
+Result 2
+Image: src/data/images/5.jpg
+Caption: the uy truth about dating
+OCR Text:
+The Ugly Truth of Dating?
+
+A group of students at Columbia Business School were asked to rate the
+importance of attributes of potential dates at a speed dating event. They
+were asked to distribute 100 points among the 6 attributes, based on
+the attributes’ importance in dating decisions.
+
+ATTRACTIVE
+
+INTELLIGENT
+
+FUN
+
+SINCERE
+
+SHARED INTERESTS
+
+AMBITIOUS
+
+Males value attractiveness
+more than females.
+
+Females value intelligence
+more than males.
+
+Males and females are on
+
+the same page when it
+comes to fun.
+
+Males value sincerity less
+than females.
+
+Females value shared
+interests more than males.
+
+Males value ambition least.
+
+------------------------------------------------------------
+Result 3
+Image: src/data/images/36.jpg
+Caption: a bar chart with the number of the numbers
+OCR Text:
+6L-8L0Z
+
+81-2102 8
+11-9102 2
+
+TURNOVER
+(RS.CRORE)
+
+
+------------------------------------------------------------
