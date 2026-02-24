@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp": "2026-02-24T11:41:43.625236",
+    "question": "Give me image of Dog",
+    "answer": "Returned image results",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2026-02-24T11:42:21.023111",
+    "question": "Give me image of Cat",
+    "answer": "Returned image results",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2026-02-24T11:42:52.905736",
+    "question": "Give me image of Periodic Table",
+    "answer": "Returned image results",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2026-02-24T11:43:52.734804",
+    "question": "Give me image of Periodic Table",
+    "answer": "Returned image results",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2026-02-24T11:51:31.469750",
+    "question": "GIve me image of a dog",
+    "answer": "Returned image results",
+    "metadata": {}
+  }
+]
