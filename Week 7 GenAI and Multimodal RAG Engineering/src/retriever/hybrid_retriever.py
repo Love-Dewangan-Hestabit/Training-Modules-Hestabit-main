@@ -2,7 +2,7 @@ import json
 import faiss
 import numpy as np
 from rank_bm25 import BM25Okapi
-from embeddings.embedder import Embedder
+from src.embeddings.embedder import Embedder
 
 INDEX_PATH = "src/vectorstore/index.faiss"
 METADATA_PATH = "src/vectorstore/metadata.json"
