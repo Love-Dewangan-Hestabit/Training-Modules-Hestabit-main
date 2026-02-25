@@ -47,17 +47,17 @@ pip install pypdf python-docx pandas
 pip install pillow pytesseract
 pip install transformers torch
 pip install sqlparse
-pip install google-generativeai
+pip install groq
 pip install openpyxl
 pip install pypandoc
 ```
 
 ## Environment Variables
 
-Set Gemini API key (if using Gemini):
+Set Groq API key (if using Groq):
 
 ```
-export GOOGLE_API_KEY=your_api_key_here
+export GROQ_API_KEY=your_api_key_here
 ```
 
 ## Running the Application
