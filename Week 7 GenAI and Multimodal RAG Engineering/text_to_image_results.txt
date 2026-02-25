@@ -1,16 +1,10 @@
 Result 1
-Image: src/data/images/just_image_81e9bbc1fe445afd4c888497d6e8e4d8abcd9029-450x274.jpg.jpg
-Caption: a black puppy dog
+Image: src/data/images/just_image_92E141F8-36E4-4331-BB2EE42AC8674DD3_source.jpg.jpg
+Caption: a cat laying on a bed with a white sheet
 OCR Text:
 
 ------------------------------------------------------------
 Result 2
-Image: src/data/images/just_image_50_a-feature_dogs-and-puppies_mobile.jpg.jpg
-Caption: a dog laying on a rock
-OCR Text:
-
-------------------------------------------------------------
-Result 3
 Image: src/data/images/19.jpg
 Caption: a red arrow rising up from the top of a bar chart
 OCR Text:
@@ -18,13 +12,13 @@ fo] Dreamstime.com
 ‘This watermarked comp image is for previewing purpases onty.
 
 ------------------------------------------------------------
-Result 4
+Result 3
 Image: src/data/images/just_image_77_lro_fullmoon.jpg.jpg
 Caption: the moon is seen in this image taken from the sky
 OCR Text:
 
 ------------------------------------------------------------
-Result 5
+Result 4
 Image: src/data/images/27.jpg
 Caption: five steps business growth chart with pencils
 OCR Text:
@@ -41,5 +35,11 @@ shits
 me ae
 
 TW sie 100% estate: Adopt to your needs and eephure your audence’s attention.
+
+------------------------------------------------------------
+Result 5
+Image: src/data/images/29.jpg
+Caption: a line of colored pencils, with a white background
+OCR Text:
 
 ------------------------------------------------------------
