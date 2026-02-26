@@ -8,8 +8,8 @@ fake = Faker()
 OUTPUT_PATH = "src/data/raw_dataset.jsonl"
 NUM_SAMPLES = 1000
 
-# % of outliers in dataset
-OUTLIER_RATIO = 0.07   # 7% outliers
+
+OUTLIER_RATIO = 0.07 
 
 finance_terms = [
     "compound interest", "inflation", "dividend yield",
@@ -18,9 +18,6 @@ finance_terms = [
 ]
 
 
-# --------------------------
-# NORMAL SAMPLES
-# --------------------------
 
 def generate_qa_sample():
     term = random.choice(finance_terms)
@@ -64,9 +61,6 @@ def generate_extraction_sample():
     }
 
 
-# --------------------------
-# OUTLIER SAMPLES
-# --------------------------
 
 def generate_long_reasoning_outlier():
     """Very long explanation"""
@@ -76,7 +70,7 @@ def generate_long_reasoning_outlier():
 
     long_explanation = (
         "To solve this financial problem, we must carefully analyze the compound interest formula. "
-        * 40  # repeat to create long text
+        * 40 
     )
 
     amount = principal * ((1 + rate/100) ** years)
@@ -116,9 +110,7 @@ def generate_noise_outlier():
     }
 
 
-# --------------------------
-# DATASET GENERATION
-# --------------------------
+
 
 def generate_dataset():
     os.makedirs("src/data", exist_ok=True)
@@ -128,7 +120,7 @@ def generate_dataset():
 
     for i in range(NUM_SAMPLES):
 
-        # Generate Outliers
+ 
         if i < num_outliers:
             outlier_type = random.choice(
                 ["long", "short", "empty", "noise"]
@@ -143,7 +135,7 @@ def generate_dataset():
             else:
                 dataset.append(generate_noise_outlier())
 
-        # Generate Normal Samples
+ 
         else:
             sample_type = random.choice(["qa", "reasoning", "extraction"])
 
