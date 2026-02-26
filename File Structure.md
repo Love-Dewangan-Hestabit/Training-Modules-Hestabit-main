@@ -53,5 +53,12 @@ TRAINING-MODULES-HESTABIT-MAIN/
 │ ├── Day 04 SQL Question Answering System/
 │ └── Day 05 Advanced Rag, Memory and Evaluation/
 │
+├── Week 8 LLM Fine Tuning, Quantisation and Optimised Inference/
+│ ├── Day 01 LLM Architecture and Data Prep for Fine Tuning/
+│ ├── Day 02 Parameter Efficient Fine Tuning/
+│ ├── Day 03 Quantisation/
+│ ├── Day 04 Inference Optimisation and Benchmarking/
+│ └── Day 05 Capstone Build and Deploy Local LLM API/
+|
 └── File Hierarchy.md
 ```
