@@ -2,5 +2,7 @@ Day 1 LLM Architecture and Data Prep for Fine Tuning/src
 
 Day 2 Parameter Efficient Fine Tuning/src
 
+Day 3 Quantisation/src
+
 
 src/quantized/model-fp16/model.safetensors
