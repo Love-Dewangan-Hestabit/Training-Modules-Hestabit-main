@@ -1,4 +1,4 @@
-# Week 8 (Day 4) - Inference Optimisation and Benchmarking
+# Week 8 (Day 4) - Inference Optimization and Benchmarking
 
 **Name: Love Dewangan**  
 **Email: love.dewangan@hestabit.in**
