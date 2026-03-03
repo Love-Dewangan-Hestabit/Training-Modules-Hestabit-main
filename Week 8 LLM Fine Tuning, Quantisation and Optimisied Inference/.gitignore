@@ -4,5 +4,7 @@ Day 2 Parameter Efficient Fine Tuning/src
 
 Day 3 Quantisation/src
 
+Day 4 Inference Optimisation and Benchmarking/src
+
 
 src/quantized/model-fp16/model.safetensors
