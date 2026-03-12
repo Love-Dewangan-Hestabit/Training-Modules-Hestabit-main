@@ -17,25 +17,32 @@ async def main():
     summarizer_agent = create_summarizer_agent(model_client)
     answer_agent = create_answer_agent(model_client)
 
-    query = input("Ask a question: ")
+    print("Type 'exit' to stop\n")
 
-    print("\nResearch Agent Output:\n")
+    while True:
 
-    research_result = await research_agent.run(task=query)
-    research_text = research_result.messages[-1].content
-    print(research_text)
+        query = input("\nAsk a question: ")
 
-    print("\nSummarizer Agent Output:\n")
+        if query.lower() == "exit":
+            break
 
-    summary_result = await summarizer_agent.run(task=research_text)
-    summary_text = summary_result.messages[-1].content
-    print(summary_text)
+        print("\nResearch Agent Output:\n")
 
-    print("\nAnswer Agent Output:\n")
+        research_result = await research_agent.run(task=query)
+        research_text = research_result.messages[-1].content
+        print(research_text)
 
-    final_result = await answer_agent.run(task=summary_text)
-    final_text = final_result.messages[-1].content
-    print(final_text)
+        print("\nSummarizer Agent Output:\n")
+
+        summary_result = await summarizer_agent.run(task=research_text)
+        summary_text = summary_result.messages[-1].content
+        print(summary_text)
+
+        print("\nAnswer Agent Output:\n")
+
+        final_result = await answer_agent.run(task=summary_text)
+        final_text = final_result.messages[-1].content
+        print(final_text)
 
     await model_client.close()
 

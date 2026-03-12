@@ -16,11 +16,10 @@ Rules:
 - Do NOT summarize the information
 - Do NOT answer the question
 - Only provide raw research information
-- Dont make the research information more than 600 words
 """,
 
         model_client=model_client,
-        model_context=BufferedChatCompletionContext(buffer_size=10)
+        model_context=BufferedChatCompletionContext(buffer_size=2)
     )
 
     return research_agent

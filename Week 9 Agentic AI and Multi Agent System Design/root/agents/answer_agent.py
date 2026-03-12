@@ -16,11 +16,11 @@ Your job:
 Rules:
 - Do NOT perform research
 - Do NOT summarize again
-- Based on the question and the summary provide the final answer shouldn't be judgemental but comparision based. 
+- Only provide the final answer based on the Research and Summary provided
 """,
 
         model_client=model_client,
-        model_context=BufferedChatCompletionContext(buffer_size=10)
+        model_context=BufferedChatCompletionContext(buffer_size=2)
     )
 
     return answer_agent

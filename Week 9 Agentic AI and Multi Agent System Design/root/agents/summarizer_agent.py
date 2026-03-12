@@ -18,11 +18,10 @@ Rules:
 - Only summarize the research
 - Concise summary to the level that user can easily understand
 - Use Bullet points if necessary
-- Dont make the summary more than 300 words
 """,
 
         model_client=model_client,
-        model_context=BufferedChatCompletionContext(buffer_size=10)
+        model_context=BufferedChatCompletionContext(buffer_size=2)
     )
 
     return summarizer_agent
