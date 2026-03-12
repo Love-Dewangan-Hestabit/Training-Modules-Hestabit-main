@@ -107,6 +107,6 @@ The implementation follows the required stack:
 | Component       | Technology |
 | --------------- | ---------- |
 | Agent Framework | AutoGen    |
-| LLM Model       | TinyLlama  |
+| LLM Model       | Mistral    |
 | Runtime         | Ollama     |
 | Language        | Python     |

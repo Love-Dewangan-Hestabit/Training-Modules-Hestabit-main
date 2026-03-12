@@ -1,5 +1,5 @@
 from autogen_agentchat.agents import AssistantAgent
-
+from autogen_core.model_context import BufferedChatCompletionContext
 
 def create_answer_agent(model_client):
 
@@ -16,9 +16,11 @@ Your job:
 Rules:
 - Do NOT perform research
 - Do NOT summarize again
+- Based on the question and the summary provide the final answer shouldn't be judgemental but comparision based. 
 """,
 
         model_client=model_client,
+        model_context=BufferedChatCompletionContext(buffer_size=10)
     )
 
     return answer_agent

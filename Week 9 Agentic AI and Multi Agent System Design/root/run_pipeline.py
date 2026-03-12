@@ -10,7 +10,7 @@ from agents.answer_agent import create_answer_agent
 async def main():
 
     model_client = OllamaChatCompletionClient(
-        model="tinyllama"
+        model="mistral"
     )
 
     research_agent = create_research_agent(model_client)
