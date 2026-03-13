@@ -2,11 +2,11 @@ import faiss
 import json
 import numpy as np
 from rank_bm25 import BM25Okapi
-from src.embeddings.clip_embedder import CLIPEmbedder
+from embeddings.clip_embedder import CLIPEmbedder
 
 
-INDEX_PATH = "src/vectorstore/image_index.faiss"
-METADATA_PATH = "src/vectorstore/image_metadata.json"
+INDEX_PATH = "vectorstore/image_index.faiss"
+METADATA_PATH = "vectorstore/image_metadata.json"
 
 
 class HybridImageSearch:

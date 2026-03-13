@@ -6,13 +6,13 @@ import numpy as np
 from PIL import Image
 from tqdm import tqdm
 from transformers import BlipProcessor, BlipForConditionalGeneration
-from src.embeddings.clip_embedder import CLIPEmbedder
+from embeddings.clip_embedder import CLIPEmbedder
 from pdf2image import convert_from_path
 
 
-IMAGE_FOLDER = "src/data/images"
-INDEX_PATH = "src/vectorstore/image_index.faiss"
-METADATA_PATH = "src/vectorstore/image_metadata.json"
+IMAGE_FOLDER = "data/images"
+INDEX_PATH = "vectorstore/image_index.faiss"
+METADATA_PATH = "vectorstore/image_metadata.json"
 
 
 class ImageIngestor:
