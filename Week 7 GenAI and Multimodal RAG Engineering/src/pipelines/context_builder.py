@@ -1,6 +1,6 @@
 import tiktoken
 
-MAX_TOKENS = 1500
+MAX_TOKENS = 3500
 
 class ContextBuilder:
     def __init__(self):

@@ -2,10 +2,10 @@ import json
 import faiss
 import numpy as np
 from rank_bm25 import BM25Okapi
-from src.embeddings.embedder import Embedder
+from embeddings.embedder import Embedder
 
-INDEX_PATH = "src/vectorstore/index.faiss"
-METADATA_PATH = "src/vectorstore/metadata.json"
+INDEX_PATH = "vectorstore/index.faiss"
+METADATA_PATH = "vectorstore/metadata.json"
 
 class HybridRetriever:
     def __init__(self):

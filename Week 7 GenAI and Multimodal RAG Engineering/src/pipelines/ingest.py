@@ -7,8 +7,8 @@ import tiktoken
 from datetime import datetime, timezone
 
 
-RAW_DATA_PATH = "src/data/raw/"
-CHUNKS_PATH = "src/data/chunks/chunks.json"
+RAW_DATA_PATH = "data/raw/"
+CHUNKS_PATH = "data/chunks/chunks.json"
 
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 100

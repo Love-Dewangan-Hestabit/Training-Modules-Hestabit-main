@@ -15,14 +15,11 @@ filters = {
 
 
 
-# Hybrid Search
 docs = retriever.search(query, filters=filters)
 
-# Rerank
-reranked = reranker.rerank(query, docs, top_k=5)
+reranked = reranker.rerank(query, docs, top_k=3)
 
-# Build Context
 context = builder.build_context(reranked)
 
-print("\nFINAL CONTEXT SENT TO LLM:\n")
+print("\nFinal content sent to llm:\n")
 print(context)
