@@ -2,8 +2,8 @@ import sqlite3
 import sqlparse
 from tabulate import tabulate
 
-from src.utils.schema_loader import SchemaLoader
-from src.generator.sql_generator import SQLGenerator
+from utils.schema_loader import SchemaLoader
+from generator.sql_generator import SQLGenerator
 
 
 class SQLPipeline:

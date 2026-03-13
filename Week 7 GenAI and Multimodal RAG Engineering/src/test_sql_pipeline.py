@@ -4,7 +4,7 @@ import pandas as pd
 import sqlite3
 from datetime import datetime
 
-from src.pipelines.sql_pipeline import SQLPipeline
+from pipelines.sql_pipeline import SQLPipeline
 
 
 def create_sqlite_from_file(file_path):

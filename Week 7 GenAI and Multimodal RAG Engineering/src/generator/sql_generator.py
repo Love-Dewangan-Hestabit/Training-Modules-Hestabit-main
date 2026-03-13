@@ -1,4 +1,4 @@
-from src.generator.llm_client import LLMClient
+from generator.llm_client import LLMClient
 
 
 class SQLGenerator:
