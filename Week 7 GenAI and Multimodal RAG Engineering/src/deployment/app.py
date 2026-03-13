@@ -1,17 +1,17 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from src.memory.memory_store import MemoryStore
-from src.utils.refinement import refine_answer
-from src.utils.hallucination import detect_hallucination
-from src.utils.scoring import faithfulness_score, confidence_score
+from memory.memory_store import MemoryStore
+from utils.refinement import refine_answer
+from utils.hallucination import detect_hallucination
+from utils.scoring import faithfulness_score, confidence_score
 
-from src.retriever.hybrid_retriever import HybridRetriever
-from src.retriever.reranker import Reranker
-from src.pipelines.context_builder import ContextBuilder
-from src.generator.llm_client import LLMClient
-from src.pipelines.sql_pipeline import SQLPipeline
-from src.retriever.image_search import HybridImageSearch
+from retriever.hybrid_retriever import HybridRetriever
+from retriever.reranker import Reranker
+from pipelines.context_builder import ContextBuilder
+from generator.llm_client import LLMClient
+from pipelines.sql_pipeline import SQLPipeline
+from retriever.image_search import HybridImageSearch
 
 app = FastAPI()
 

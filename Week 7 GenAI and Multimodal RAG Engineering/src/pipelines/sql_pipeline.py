@@ -12,9 +12,6 @@ class SQLPipeline:
         self.schema_loader = SchemaLoader(db_path)
         self.generator = SQLGenerator()
 
-    # --------------------------------------------------
-    # VALIDATE SQL
-    # --------------------------------------------------
     def validate_sql(self, sql):
         parsed = sqlparse.parse(sql)
         if not parsed:
@@ -35,9 +32,7 @@ class SQLPipeline:
 
         return True
 
-    # --------------------------------------------------
-    # EXECUTE SQL
-    # --------------------------------------------------
+
     def execute_sql(self, sql):
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
@@ -52,27 +47,25 @@ class SQLPipeline:
             conn.close()
             raise e
 
-    # --------------------------------------------------
-    # RUN PIPELINE (OPTIMIZED)
-    # --------------------------------------------------
+
     def run(self, question):
 
         schema = self.schema_loader.load_schema()
 
-        # 1️⃣ Generate SQL (1 API call)
+  
         sql = self.generator.generate_sql(question, schema)
         print("\nGenerated SQL:\n", sql)
 
         self.validate_sql(sql)
 
-        # 2️⃣ Try execution
+
         try:
             columns, rows = self.execute_sql(sql)
 
         except Exception as e:
             print("SQL failed. Attempting correction...")
             
-            # 2️⃣ Correction attempt (1 API call only if needed)
+
             sql = self.generator.correct_sql(sql, str(e), schema)
             print("\nCorrected SQL:\n", sql)
 
@@ -84,8 +77,6 @@ class SQLPipeline:
                 "sql": sql,
                 "result": "No results found."
             }
-
-        # ❌ Removed LLM summarization (saves API call)
 
         result_table = tabulate(rows, headers=columns, tablefmt="grid")
 
