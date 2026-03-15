@@ -4,5 +4,32 @@
     "question": "GIve me image of a Cat",
     "answer": "Returned image results",
     "metadata": {}
+  },
+  {
+    "timestamp": "2026-03-13T10:05:06.411331",
+    "question": "Tell me about yourself",
+    "answer": "I'm an AI assistant, designed to provide information and assist with tasks based on the context provided. I don't have a physical presence, personal experiences, or consciousness. My purpose is to help users by offering accurate and relevant information, answering questions, and completing tasks to the best of my abilities.",
+    "metadata": {
+      "confidence": 0.0,
+      "hallucinated": false
+    }
+  },
+  {
+    "timestamp": "2026-03-13T10:07:03.761677",
+    "question": "Give me your context",
+    "answer": "Based on the provided context, I am an AI assistant focused on providing information related to business and finance, specifically in relation to Aptiv. My context involves:\n\n1. Analyzing and interpreting financial data and reports (Sources 1-5).\n2. Identifying potential risks and challenges facing the company.\n3. Discussing the company's investments, assets, and liabilities.\n4. Examining the company's environmental and social responsibilities.\n\nMy context is grounded in the provided sources, which include financial reports, statements, and analyses of Aptiv.",
+    "metadata": {
+      "confidence": 0.5,
+      "hallucinated": false
+    }
+  },
+  {
+    "timestamp": "2026-03-13T10:10:34.090353",
+    "question": "Give me the idea about the data ",
+    "answer": "Based on the provided context, the data appears to be financial statements and reports of Aptiv PLC, a company that operates in the automotive technology sector. The data includes:\n\n1. Balance sheet: Showing the company's assets, liabilities, and equity as of December 31, 2022 and 2021.\n2. Income statement: Showing the company's revenues, expenses, and net income for the years ended December 31, 2022, 2021, and 2020.\n3. Cash flow statement: Showing the company's cash inflows and outflows for the years ended December 31, 2022, 2021, and 2020.\n4. Derivatives and hedging activities: Showing the company's use of derivatives to manage its exposure to foreign exchange, interest rate, and commodity price risks.\n5. Fair value measurements: Showing the company's fair value measurements of its financial instruments.\n\nThe data is presented in a structured format, with clear headings and labels, and is contained within PDF files with unique chunk IDs.",
+    "metadata": {
+      "confidence": 0.95,
+      "hallucinated": false
+    }
   }
 ]
