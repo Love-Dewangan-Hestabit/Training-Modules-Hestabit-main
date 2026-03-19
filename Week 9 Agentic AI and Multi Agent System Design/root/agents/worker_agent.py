@@ -8,18 +8,21 @@ def create_worker_agent(model_client):
         name="worker_agent",
 
         system_message="""
-You are a Worker Agent.
-
-Your job:
-Execute the task assigned by the planner.
-
-Rules:
-- Focus only on the given task
-- Produce clear results
-""",
+        You are a Worker Agent.
+        
+        Your job:
+        Answer ONLY the given task.
+        
+        STRICT RULES:
+        - Be concise (max 3-5 lines)
+        - NO repetition
+        - NO re-explaining previous tasks
+        - NO introduction or conclusion
+        - Use bullet points if helpful
+        """,
 
         model_client=model_client,
-        model_context=BufferedChatCompletionContext(buffer_size=10)
+        model_context=BufferedChatCompletionContext(buffer_size=5)
     )
 
     return worker
