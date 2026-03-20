@@ -45,7 +45,7 @@ class Orchestrator:
 
         context = f"User Query:\n{query}\n"
 
-        # 🔥 ONLY TRACK AGENT FLOW
+ 
         agent_flow = ["planner"]
 
         step = 0
@@ -55,7 +55,7 @@ class Orchestrator:
             step += 1
             print(f"\n--- STEP {step} ---")
 
-            # 🔹 Planner decides next step
+  
             plan_response = await self.planner.run(task=context)
             raw = plan_response.messages[-1].content
 
@@ -69,35 +69,35 @@ class Orchestrator:
 
             print("[NEXT ACTION]:", action)
 
-            # 🔹 FINISH
+  
             if action == "finish":
                 agent_flow.append("finish")
                 break
 
-            # 🔹 FILE
+
             elif action == "file":
                 agent_flow.append("file_agent")
                 result = await self.file_agent.execute(context)
                 context += f"\n=== FILE OUTPUT ===\n{result}\n"
 
-            # 🔹 DB
+     
             elif action == "db":
                 agent_flow.append("db_agent")
                 result = await self.db_agent.execute(query, "data/sales.csv")
                 context += f"\n=== DB OUTPUT ===\n{result}\n"
 
-            # 🔹 CODE
+   
             elif action == "code":
                 agent_flow.append("code_agent")
                 result = await self.code_agent.execute(context)
                 context += f"\n=== CODE OUTPUT ===\n{result}\n"
 
-        # 🔥 PRINT CLEAN WORKFLOW
-        print("\n🔄 AGENT WORKFLOW:\n")
-        print(" → ".join(agent_flow))
+      
+        print("\nAGENT WORKFLOW:\n")
+        print(" -> ".join(agent_flow))
         print("\n" + "="*50 + "\n")
 
-        # 🔹 FINAL ANSWER
+
         final_agent = AssistantAgent(
             name="final_agent",
             model_client=self.model_client,
@@ -122,16 +122,16 @@ class Orchestrator:
         return final.messages[-1].content
 
 
-# RUN
+
 if __name__ == "__main__":
 
     async def main():
         orch = Orchestrator()
 
-        print("\n🚀 Dynamic Multi-Agent System Started\n")
+        print("\nDynamic Multi-Agent System Started\n")
 
         while True:
-            query = input("🧠 Enter your query: ")
+            query = input("Enter your query: ")
 
             if query.lower() in ["exit", "quit"]:
                 break
@@ -144,6 +144,6 @@ if __name__ == "__main__":
                 print("\n" + "="*50 + "\n")
 
             except Exception as e:
-                print(f"\n❌ Error: {str(e)}\n")
+                print(f"\nError: {str(e)}\n")
 
     asyncio.run(main())
