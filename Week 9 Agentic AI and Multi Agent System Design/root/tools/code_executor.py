@@ -10,26 +10,25 @@ class CodeExecutorAgent:
             name="code_agent",
             model_client=model_client,
             system_message="""
-You are a Python execution agent.
-
-STRICT RULES:
-- Use ONLY standard Python libraries
-- NEVER generate fake/sample data
-- ALWAYS use DB OUTPUT if available
-- DO NOT re-read CSV if DB output is present
-- ALWAYS write files inside "data/" folder
-- Handle case-insensitive matching (e.g., Electronics/electronic)
-- Print final output
-- NO markdown
-- NO explanations
-"""
+            You are a Python execution agent.
+            
+            STRICT RULES:
+            - Use ONLY standard Python libraries
+            - NEVER generate fake/sample data
+            - ALWAYS use provided context
+            - DO NOT re-read CSV if DB output is present
+            - ALWAYS write files inside "data/output/" folder
+            - Handle case-insensitive matching
+            - Print final output
+            - NO markdown
+            - NO explanations
+            """
         )
 
-    async def execute(self, task: str):
-        response = await self.agent.run(task=task)
+    async def execute(self, context: str):
+        response = await self.agent.run(task=context)
         code = response.messages[-1].content
 
-        # ✅ REMOVE MARKDOWN
         code = re.sub(r"```python|```", "", code).strip()
 
         print("\n[CODE GENERATED]\n", code)

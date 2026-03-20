@@ -12,25 +12,24 @@ class FileAgent:
             name="file_agent",
             model_client=model_client,
             system_message="""
-You are a File Agent.
-
-STRICT RULES:
-- You ONLY perform file operations
-- DO NOT generate content on your own
-- DO NOT explain anything
-- If content is not provided → return error
-
-Return ONLY JSON:
-{
-  "action": "read OR write",
-  "file_name": "file.txt",
-  "content": "ONLY if write"
-}
-"""
+            You are a File Agent.
+            
+            STRICT RULES:
+            - ONLY perform file operations
+            - DO NOT generate content
+            - NO explanation
+            
+            Return ONLY JSON:
+            {
+              "action": "read OR write",
+              "file_name": "file.txt",
+              "content": "ONLY if write"
+            }
+            """
         )
 
-    async def execute(self, task: str):
-        response = await self.agent.run(task=task)
+    async def execute(self, context: str):
+        response = await self.agent.run(task=context)
         raw = response.messages[-1].content
 
         print("\n[FILE AGENT RAW]\n", raw)
@@ -43,18 +42,17 @@ Return ONLY JSON:
             action = data["action"]
             file_name = data["file_name"]
 
-            file_path = os.path.join(BASE_PATH, file_name)
-
             os.makedirs(BASE_PATH, exist_ok=True)
+            file_path = os.path.join(BASE_PATH, file_name)
 
             if action == "write":
                 with open(file_path, "w", encoding="utf-8") as f:
                     f.write(data.get("content", ""))
-                return f"✅ File written: {file_path}"
+                return f"File written: {file_path}"
 
             elif action == "read":
                 if not os.path.exists(file_path):
-                    return f"❌ File not found: {file_path}"
+                    return f"File not found: {file_path}"
 
                 with open(file_path, "r", encoding="utf-8") as f:
                     return f.read()

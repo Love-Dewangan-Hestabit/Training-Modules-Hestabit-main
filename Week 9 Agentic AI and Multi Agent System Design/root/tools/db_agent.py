@@ -1,5 +1,6 @@
 import sqlite3
 import pandas as pd
+import re
 from autogen_agentchat.agents import AssistantAgent
 
 
@@ -9,20 +10,22 @@ class DBAgent:
             name="db_agent",
             model_client=model_client,
             system_message="""
-Convert user query to SQL.
-
-STRICT RULES:
-- Return ONLY SQL
-- No explanation
-- No markdown
-- SQLite compatible
-- Table name = data
-"""
+            Convert user query to SQL.
+            
+            STRICT RULES:
+            - Return ONLY SQL
+            - No explanation
+            - No markdown
+            - SQLite compatible
+            - Table name = data
+            """
         )
 
-    async def execute(self, task: str, csv_path: str):
-        response = await self.agent.run(task=task)
+    async def execute(self, query: str, csv_path: str):
+        response = await self.agent.run(task=query)
         sql_query = response.messages[-1].content.strip()
+
+        sql_query = re.sub(r"```sql|```", "", sql_query)
 
         print("\n[SQL GENERATED]\n", sql_query)
 
