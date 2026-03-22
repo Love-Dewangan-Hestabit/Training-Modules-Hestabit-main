@@ -1,0 +1,34 @@
+DAY 2 AGENT BENCHMARK REPORT
+============================================================
+Model: mistral
+Query: What is better, investing in Mutual Funds or Fixed Deposit?
+Timestamp: 2026-03-22 18:47:02
+Runs: 3
+
+PERFORMANCE
+------------------------------------------------------------
+Total Avg: 354.14 sec
+Planner Avg: 34.06 sec
+Workers Avg: 125.88 sec
+Reflection Avg: 126.65 sec
+Validator Avg: 67.54 sec
+
+FINAL OUTPUT SAMPLE
+------------------------------------------------------------
+ **Comparison of Mutual Funds and Fixed Deposits:**
+
+1. **Investment Characteristics:**
+   - **Mutual Funds:** High potential returns, diversification benefits, professional management, higher risk due to market fluctuations.
+   - **Fixed Deposits:** Fixed interest rate, low risk, regular income, lower returns compared to mutual funds.
+
+2. **Suitable for:**
+   - **Short-term (up to 1 year):** Fixed Deposits, offering stability and guaranteed returns.
+   - **Medium-term (1-3 years):** Both can be considered, depending on risk tolerance and liquidity needs.
+   - **Long-term (more than 3 years):** Mutual Funds, particularly suitable for those with a higher risk tolerance seeking capital appreciation.
+
+3. **Historical Performance:**
+   - Mutual Funds have generally outperformed Fixed Deposits in the long run, but with greater volatility. Research various funds and banks for better decision making.
+
+4. **Caution:** Past performance does not guarantee future results. Consult with a financial advisor to help determine the most suitable investment based on individual financial goals and risk profile.
+
+============================================================

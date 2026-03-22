@@ -1,0 +1,20 @@
+DAY 2 AGENT BENCHMARK REPORT
+============================================================
+Model: qwen:4b
+Query: What is better, investing in Mutual Funds or Fixed Deposit?
+Timestamp: 2026-03-22 21:32:20
+Runs: 3
+
+PERFORMANCE
+------------------------------------------------------------
+Total Avg: 20.32 sec
+Planner Avg: 12.21 sec
+Workers Avg: 0.0 sec
+Reflection Avg: 3.93 sec
+Validator Avg: 4.18 sec
+
+FINAL OUTPUT SAMPLE
+------------------------------------------------------------
+I understand, I apologize for the confusion. How can I assist you today?
+
+============================================================
