@@ -1,0 +1,7 @@
+Index,Customer Id,First Name,Last Name,Company,City,Country,Phone 1,Phone 2,Email,Subscription Date,Website
+5,D60df62ad2ae41E,Kara,Woods,Mccarthy-Kelley,Port Jacksonland,Nepal,+1-360-693-4419x19272,163-627-2565,jesus90@roberson.info,2022-04-22,http://merritt.com/
+189,ccC3b8ae049544D,Shannon,Yoder,Whitney Ltd,Jofort,Nepal,+1-670-442-4295,1908305660,laura10@romero.com,2020-07-17,https://www.lang-ellison.org/
+229,A205c4fDc4AeD44,Adam,Levy,Conrad Group,Bushview,Nepal,937.480.3643x98361,(511)946-3691x20164,pcuevas@hancock.org,2020-05-15,http://osborn.com/
+307,C0eA15D68D551b3,Joshua,Dalton,Cross PLC,Lake Troyville,Nepal,001-755-615-1410x02770,850.777.2274x586,msellers@fisher.net,2021-02-24,http://stone.com/
+837,6140fD9b8bEf5da,Adrienne,Medina,"Benitez, Wilkinson and Mooney",Darrellstad,Nepal,2359699770,682.333.4195,edwardsjoyce@freeman-chang.info,2022-03-28,https://www.french-bennett.com/
+895,a90DaCCBF50263f,Chelsea,Lester,Vaughan and Sons,Taylorport,Nepal,(560)442-1117x162,517.746.6425,murrayeric@mcgrath.com,2021-05-15,http://www.williams.biz/
