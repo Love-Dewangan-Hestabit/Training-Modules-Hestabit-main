@@ -1,0 +1,19 @@
+AGENT BENCHMARK REPORT
+============================================================
+Model: tinyllama
+Query: What is GST?
+Timestamp: 2026-03-22 02:50:32
+Runs: 3
+
+PERFORMANCE
+------------------------------------------------------------
+Total Avg: 19.4 sec
+Research Avg: 3.77 sec
+Summary Avg: 4.73 sec
+Answer Avg: 10.9 sec
+
+SAMPLE OUTPUT
+------------------------------------------------------------
+Yes, that's right. GST (Goods and Services Tax) is a comprehensive taxation system in India aimed at harmonizing the tax structure for goods and services, and promoting a uniform tax regime for all businesses in India. It is mandatory for all companies in India, and businesses that do not opt for GST must pay the tax separately. The GST Council determines the rates at which goods and services are taxed, and the taxes are collected by the central and state governments. The aim is to create a single taxation system for all businesses, reduce compliance costs, and create an efficient tax administration system.
+
+============================================================

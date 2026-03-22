@@ -1,0 +1,19 @@
+AGENT BENCHMARK REPORT
+============================================================
+Model: mistral
+Query: What is Share Purchase Agreement, what's its usage.
+Timestamp: 2026-03-22 17:53:21
+Runs: 3
+
+PERFORMANCE
+------------------------------------------------------------
+Total Avg: 137.62 sec
+Research Avg: 45.31 sec
+Summary Avg: 53.06 sec
+Answer Avg: 39.25 sec
+
+SAMPLE OUTPUT
+------------------------------------------------------------
+ The Share Purchase Agreement (SPA) is a legal contract between a buyer and a seller, outlining the terms and conditions for buying and selling shares in a private or public company. It's used in the acquisition or sale of a company, where the acquisition is done by purchasing existing shareholders' shares. The SPA specifies the number of shares to be transferred, the price, and various conditions such as warranties, representations, covenants, and indemnities. It covers due diligence, conditions precedent, closing, and post-closing matters. It provides a legal basis for share transfer, defines roles, responsibilities, and potential issues in M&A transactions. The SPA is typically negotiated, agreed upon, and legally reviewed, and may include provisions for confidentiality, non-disclosure, and non-compete agreements.
+
+============================================================

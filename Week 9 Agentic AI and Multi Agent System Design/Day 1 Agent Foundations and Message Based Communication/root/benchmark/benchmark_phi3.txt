@@ -1,0 +1,19 @@
+AGENT BENCHMARK REPORT
+============================================================
+Model: phi3
+Query: What is GST?
+Timestamp: 2026-03-22 16:49:49
+Runs: 3
+
+PERFORMANCE
+------------------------------------------------------------
+Total Avg: 39.09 sec
+Research Avg: 11.9 sec
+Summary Avg: 15.7 sec
+Answer Avg: 11.49 sec
+
+SAMPLE OUTPUT
+------------------------------------------------------------
+The GST is a federal value-added tax that supports both federal and state governments by replacing other indirect taxes. It applies to most goods and services sold for profit and is based on an individual's consumption levels, administered by the federal government.
+
+============================================================

@@ -1,0 +1,19 @@
+AGENT BENCHMARK REPORT
+============================================================
+Model: mistral
+Query: What is GST?
+Timestamp: 2026-03-22 02:44:00
+Runs: 3
+
+PERFORMANCE
+------------------------------------------------------------
+Total Avg: 135.75 sec
+Research Avg: 42.71 sec
+Summary Avg: 54.6 sec
+Answer Avg: 38.45 sec
+
+SAMPLE OUTPUT
+------------------------------------------------------------
+ GST (Goods and Services Tax) is a comprehensive, value-added tax applied to the supply of goods and services in various countries, with the aim of replacing multiple indirect taxes and simplifying the tax system by reducing cascading effects. Key features include being charged at each stage of production/distribution, with credits for taxes paid at earlier stages, allowing businesses to claim credit for GST on inputs against the GST collected on outputs, and promoting a simplified administration and transparent tax system. It is designed to be revenue-neutral, although revenue differences may occur due to changes in tax base or rates. The impacts of GST on businesses, consumers, and the economy can vary depending on the specific circumstances of each country or region.
+
+============================================================

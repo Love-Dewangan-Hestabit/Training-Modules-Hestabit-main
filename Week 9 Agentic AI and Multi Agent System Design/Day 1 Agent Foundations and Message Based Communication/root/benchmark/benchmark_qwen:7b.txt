@@ -1,0 +1,23 @@
+AGENT BENCHMARK REPORT
+============================================================
+Model: qwen:7b
+Query: What is GST?
+Timestamp: 2026-03-22 16:45:08
+Runs: 3
+
+PERFORMANCE
+------------------------------------------------------------
+Total Avg: 85.48 sec
+Research Avg: 24.54 sec
+Summary Avg: 32.53 sec
+Answer Avg: 28.4 sec
+
+SAMPLE OUTPUT
+------------------------------------------------------------
+Final Answer: GST (Goods and Services Tax) is a comprehensive indirect tax introduced in India in 2017. The goal was to simplify the tax system by eliminating multiple taxes at state and central levels.
+
+Businesses in India are required to register and collect taxes from customers based on the goods or services provided. Tax rates vary across different goods and services, and categories include zero-rated goods (like food), input tax credit, and GST attractors for foreign companies.
+
+In summary, GST is a significant tax reform in India designed to improve efficiency and transparency in the tax system.
+
+============================================================
