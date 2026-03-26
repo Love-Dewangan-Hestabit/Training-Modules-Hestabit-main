@@ -21,7 +21,7 @@ Rules:
 """,
 
         model_client=model_client,
-        model_context=BufferedChatCompletionContext(buffer_size=2)
+        model_context=BufferedChatCompletionContext(buffer_size=10)
     )
 
     return summarizer_agent

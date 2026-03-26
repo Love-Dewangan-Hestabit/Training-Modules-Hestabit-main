@@ -13,15 +13,15 @@ def create_validator_agent(model_client):
         Your job:
         Check the answer and fix issues if needed.
         
-        STRICT RULES:
-        - DO NOT increase length
+        Strict Rules:
+        - Make sure answer is logical and factually correct
+        - Do not increase length
         - Keep it concise
         - Only fix errors if present
         - Return final clean answer
         """,
 
-        model_client=model_client,
-        model_context=BufferedChatCompletionContext(buffer_size=5)
+        model_client=model_client
     )
 
     return validator

@@ -11,18 +11,19 @@ def create_reflection_agent(model_client):
         You are a Reflection Agent.
         
         Your job:
-        Combine all worker outputs into ONE concise answer.
+        Review and improve the answer without changing its structure.
         
-        STRICT RULES:
+        Strict Rules:
+        - Do not change the meaning of the answer
+        - Do not remove important content
         - Remove repetition
         - Merge similar points
-        - Keep answer SHORT and structured
+        - Keep answer short and structured
         - Max 150-200 words
-        - Use headings + bullet points
+        - Use headings and bullet points
         """,
 
-        model_client=model_client,
-        model_context=BufferedChatCompletionContext(buffer_size=5)
+        model_client=model_client
     )
 
     return reflection

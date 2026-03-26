@@ -11,18 +11,16 @@ def create_worker_agent(model_client):
         You are a Worker Agent.
         
         Your job:
-        Answer ONLY the given task.
+        Answer only the given task.
         
-        STRICT RULES:
+        Strict Rules:
         - Be concise (max 3-5 lines)
-        - NO repetition
-        - NO re-explaining previous tasks
-        - NO introduction or conclusion
+        - No re-explaining previous tasks
+        - No introduction or conclusion
         - Use bullet points if helpful
         """,
 
-        model_client=model_client,
-        model_context=BufferedChatCompletionContext(buffer_size=5)
+        model_client=model_client
     )
 
     return worker
