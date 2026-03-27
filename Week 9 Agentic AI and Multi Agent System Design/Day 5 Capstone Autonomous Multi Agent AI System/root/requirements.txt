@@ -1,0 +1,13 @@
+streamlit
+nest_asyncio
+python-dotenv
+openai
+autogen
+autogen-agentchat
+autogen-ext
+faiss-cpu
+numpy
+sentence-transformers
+transformers
+pandas
+groq

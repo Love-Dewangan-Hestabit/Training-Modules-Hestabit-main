@@ -17,16 +17,16 @@ class VectorStore:
         self.meta_path = meta_path
         self.dimension = 384
 
-        # Load or initialize
+    
         if os.path.exists(index_path) and os.path.exists(meta_path):
             self.index = faiss.read_index(index_path)
 
             with open(meta_path, "rb") as f:
                 self.metadata = pickle.load(f)
 
-            # 🔥 SYNC CHECK
+            
             if self.index.ntotal != len(self.metadata):
-                print("⚠️ FAISS index and metadata mismatch. Resetting...")
+                print("FAISS index and metadata mismatch. Resetting...")
                 self.index = faiss.IndexFlatL2(self.dimension)
                 self.metadata = []
 
@@ -40,14 +40,14 @@ class VectorStore:
         self.index.add(np.array(embedding).astype("float32"))
         self.metadata.append(meta)
 
-        # 🔥 HARD CHECK
+        
         assert self.index.ntotal == len(self.metadata), \
             "FAISS and metadata out of sync!"
 
         self._save()
 
     def search(self, query, k=3):
-        # 🔥 EMPTY CHECK
+        
         if len(self.metadata) == 0:
             return []
 

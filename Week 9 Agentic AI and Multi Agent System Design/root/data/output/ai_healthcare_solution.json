@@ -1,0 +1,24 @@
+{
+    "patients": [
+        {
+            "patient_id": "P001",
+            "name": "John Doe",
+            "age": 30,
+            "medical_history": "Hypertension"
+        }
+    ],
+    "diagnoses": [
+        {
+            "diagnosis_id": "D001",
+            "patient_id": "P001",
+            "diagnosis": "Diabetes"
+        }
+    ],
+    "treatments": [
+        {
+            "treatment_id": "T001",
+            "patient_id": "P001",
+            "treatment": "Insulin therapy"
+        }
+    ]
+}
