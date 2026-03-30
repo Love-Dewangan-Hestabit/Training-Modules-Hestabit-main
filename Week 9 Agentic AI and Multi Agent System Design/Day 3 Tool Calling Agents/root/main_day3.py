@@ -30,7 +30,7 @@ class Orchestrator:
             - Think step by step
             - Use previous outputs
             - You can reuse tools multiple times
-            - When task is complete → action = "finish"
+            - When task is complete -> action = "finish"
             - No explanation outside JSON
             """
         )
@@ -128,7 +128,7 @@ if __name__ == "__main__":
     async def main():
         orch = Orchestrator()
 
-        print("\nDynamic Multi-Agent System Started\n")
+        print("\nDynamic Multi-Agent System\n")
 
         while True:
             query = input("Enter your query: ")
