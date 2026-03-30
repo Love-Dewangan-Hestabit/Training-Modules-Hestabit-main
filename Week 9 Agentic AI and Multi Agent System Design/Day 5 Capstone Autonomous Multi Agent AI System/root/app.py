@@ -73,8 +73,8 @@ with st.sidebar:
     col2.metric("Long Term DB", lt_count)
     st.metric("Session Context", f"{sess_count} messages")
 
-st.title("Command Center")
-st.write("Ask NEXUS AI to analyze data, execute code, write files, or plan strategies.")
+st.title("Querying Area")
+st.write("Ask NEXUS AI to plan strategies, analyze data or execute code.")
 
 
 user_task = st.chat_input("Enter your task here...")
@@ -160,7 +160,7 @@ if user_task:
         )
         
         with final_box.container():
-            st.info(final_answer)
+            st.markdown(final_answer)
             
         if generated_files_list:
             st.write("---")

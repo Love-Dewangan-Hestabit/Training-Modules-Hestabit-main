@@ -12,20 +12,19 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
-from agents.planner_agent       import create_planner_agent
+from agents.planner_agent import create_planner_agent
 from agents.tool_selector_agent import create_tool_selector_agent
-from agents.research_agent      import create_research_agent
-from agents.analyst_agent       import create_analyst_agent
-from agents.critic_agent        import create_critic_agent
-from agents.optimizer_agent     import create_optimizer_agent
-from agents.validator           import create_validator_agent
-from agents.reporter_agent      import create_reporter_agent
-from tools.code_executor        import CodeExecutorAgent
-from tools.db_agent             import DBAgent
-from tools.file_agent           import FileAgent
-from config               import get_model_client
-from memory                     import (SessionMemory, LongTermMemory,
-                                         VectorStore, MemorySummarizer)
+from agents.research_agent import create_research_agent
+from agents.analyst_agent import create_analyst_agent
+from agents.critic_agent import create_critic_agent
+from agents.optimizer_agent import create_optimizer_agent
+from agents.validator import create_validator_agent
+from agents.reporter_agent import create_reporter_agent
+from tools.code_executor import CodeExecutorAgent
+from tools.db_agent import DBAgent
+from tools.file_agent import FileAgent
+from config import get_model_client
+from memory import (SessionMemory, LongTermMemory, VectorStore, MemorySummarizer)
 
 os.makedirs("logs", exist_ok=True)
 
@@ -107,12 +106,6 @@ def _is_read_task(task: str) -> bool:
 
 
 class NexusOrchestrator:
-    """
-    Tool execution order:
-      PRE-PIPELINE  → db_agent, code_executor, file_agent(READ)
-      AGENT PIPELINE
-      POST-PIPELINE → file_agent(WRITE)
-    """
 
     AGENT_FACTORIES = {
         "research_agent":  create_research_agent,
@@ -182,7 +175,6 @@ class NexusOrchestrator:
         return final_output
 
     def _recall_memory(self, user_task: str) -> str:
-        """Search vector store + long-term DB for relevant context."""
         parts = []
 
         similar = self.vector_store.search(user_task, k=3)
@@ -220,8 +212,6 @@ class NexusOrchestrator:
         return block
 
     async def _store_memory(self, user_task: str, response: str, tools: str) -> None:
-        """Summarize, score, and persist if important enough."""
-
         self.session_memory.add("user", user_task)
         self.session_memory.add("assistant", response[:500])
 
