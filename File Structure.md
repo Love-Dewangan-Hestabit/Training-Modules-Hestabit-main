@@ -60,5 +60,11 @@ TRAINING-MODULES-HESTABIT-MAIN/
 │ ├── Day 04 Inference Optimisation and Benchmarking/
 │ └── Day 05 Capstone Build and Deploy Local LLM API/
 |
+├── Week 9 Agentic AI and Multi Agent System Design/
+│ ├── Day 01 Agent Foundations and Message Based Communication/
+│ ├── Day 02 Multi Agent Orchestration/
+│ ├── Day 03 Tool Calling Agents/
+│ ├── Day 04 Memory Systems (Short Term , Long Term and Vector Memory)/
+│ └── Day 05 Capstone: Autonomous Multi-Agent AI System/
 └── File Hierarchy.md
 ```
