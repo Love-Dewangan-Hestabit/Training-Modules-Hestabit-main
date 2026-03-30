@@ -90,7 +90,7 @@ class MemoryOrchestrator:
         summary = await summary_task
 
         print("\n" + "-" * 60)
-        print("SUMMARY STORED")
+        print("Summary")
         print("-" * 60)
         print(summary)
 
@@ -102,17 +102,17 @@ class MemoryOrchestrator:
 
 
 async def main():
-    print("\nInitializing system...")
+    print("\nInitializing Application")
 
     orchestrator = MemoryOrchestrator()
 
     print("System ready.")
-    print("\n" + "=" * 60)
-    print("Memory-Enhanced Agent Chat")
-    print("=" * 60)
+    print("\n" + "-" * 60)
+    print("Agentic AI with Memory")
+    print("-" * 60)
 
     while True:
-        user_input = input("\nChat > ")
+        user_input = input("\nChat: ")
 
         if user_input.lower() in ["exit", "quit"]:
             break
