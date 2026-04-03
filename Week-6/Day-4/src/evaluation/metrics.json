@@ -1,0 +1,43 @@
+{
+    "Logistic Regression": {
+        "accuracy": 0.8629326158737923,
+        "precision": 0.6921945701357466,
+        "recall": 0.30075075075075075,
+        "f1": 0.4184912110949847,
+        "roc_auc": 0.8164725361804699,
+        "cv_training_time_seconds": 0.0595
+    },
+    "Random Forest": {
+        "accuracy": 0.8530064000652235,
+        "precision": 0.6977272727272728,
+        "recall": 0.20195195195195198,
+        "f1": 0.3121057513914657,
+        "roc_auc": 0.7646019428321085,
+        "cv_training_time_seconds": 1.242
+    },
+    "Neural Network": {
+        "accuracy": 0.8232399820635115,
+        "precision": 0.44619047619047614,
+        "recall": 0.3270270270270271,
+        "f1": 0.37607272095089694,
+        "roc_auc": 0.7159268248195886,
+        "cv_training_time_seconds": 4.5927
+    },
+    "XGBoost": {
+        "accuracy": 0.8331743508214096,
+        "precision": 0.49004761904761895,
+        "recall": 0.3,
+        "f1": 0.3717396666413933,
+        "roc_auc": 0.7522471294310875,
+        "cv_training_time_seconds": 0.326
+    },
+    "Best_Model_Test_Performance": {
+        "accuracy": 0.8705035971223022,
+        "precision": 0.7272727272727273,
+        "recall": 0.34782608695652173,
+        "f1": 0.47058823529411764,
+        "roc_auc": 0.8505434782608695,
+        "final_training_time_seconds": 0.0214
+    },
+    "Total_Runtime_Seconds": 6.2556
+}
