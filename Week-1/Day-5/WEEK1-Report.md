@@ -2,15 +2,11 @@
 
 **Name:** Love Dewangan  
 **Email:** love.dewangan@hestabit.in
-**Week:** January 5-9, 2026  
-
----
+**Week:** January 5-9, 2026
 
 ## Overview
 
 This week transformed my understanding of software engineering from "writing code that works" to "building systems that are maintainable, debuggable, and production-ready." The bootcamp pushed me out of my comfort zone by removing GUIs and forcing me to truly understand what happens under the hood.
-
----
 
 ## Day 1: System Reverse Engineering & Node Mastery
 
@@ -19,7 +15,6 @@ This week transformed my understanding of software engineering from "writing cod
 By the end of Day 1, I learned terminal navigation and system inspection which is an integral part of system reverse engineering.
 These commands are invaluable for troubleshooting environment-related issues, especially when dealing with OS compatibility problems or PATH conflicts across different machines. They're equally useful in CI/CD pipelines to verify the execution environment and when writing automation scripts that need to adapt to different system configurations. Understanding these commands means I can diagnose "it works on my machine" problems quickly and write more portable, reliable code.
 
-
 ### Research
 
 - Researched the difference between bash, zsh, and PowerShell to understand shell-specific commands
@@ -27,8 +22,6 @@ These commands are invaluable for troubleshooting environment-related issues, es
 - Explored how the `os` module in Node.js accesses system information
 - Read about why streams are more memory-efficient than buffers for large files
 - Investigated how to properly measure memory usage in Node.js applications
-
----
 
 ## Day 2: CLI Tools & Concurrency
 
@@ -44,8 +37,6 @@ By the end of Day 2, I learned to build professional command-line tools and unde
 - Read about optimal chunk sizes for dividing large files to balance memory usage and performance
 - Investigated why adding more workers doesn't always improve performance.
 
----
-
 ## Day 3: Git Mastery
 
 ### Learning Outcomes
@@ -55,14 +46,17 @@ By the end of Day 3, I learned that Git is far more powerful than just a save bu
 ### What Broke
 
 **Git Bisect Confusion**
+
 - First time using bisect—didn't understand the "good" vs "bad" marking system and marked commits randomly.
 - **Solution:** Realized bisect uses binary search. I needed to test code at each checkout, mark it based on whether the bug exists, and let Git narrow it down automatically.
 
 **Stash Workflow **
+
 - Used `git stash` and my changes "disappeared," thought I lost everything.
 - **Solution:** Learned `git stash list` shows stored changes and `git stash apply` restores them.
 
 **Merge Conflict Markers Mystery**
+
 - Hit first real conflict and the `<<<<<<<`, `=======`, `>>>>>>>` markers looked like gibberish.
 
 ### Research
@@ -72,8 +66,6 @@ By the end of Day 3, I learned that Git is far more powerful than just a save bu
 - Explored the difference between `git reset --soft`, `--mixed`, and `--hard`
 - Read about best practices for writing meaningful commit messages
 - Investigated how `git bisect` uses binary search to efficiently find bug-introducing commits
-
----
 
 ## Day 4: HTTP & API Forensics
 
@@ -89,8 +81,6 @@ By the end of Day 4, I learned that HTTP isn't magic it's just structured text f
 - Read about CORS and why browsers have same-origin security policies
 - Investigated the difference between GET, POST, PUT, and DELETE methods and their proper use cases
 
----
-
 ## Day 5: Automation & CI Pipelines
 
 ### Learning Outcomes
@@ -100,10 +90,12 @@ By the end of Day 5, I learned that automation isn't about being lazy—it's abo
 ### What Broke
 
 **Husky Installation Issues**
+
 - Followed outdated tutorial with deprecated Husky v8+ commands that didn't work.
 - **Solution:** Read official docs for the new setup method and learned hook files need `chmod +x` to be executable.
 
 **ESLint and Prettier Conflicts**
+
 - Set them up separately, causing endless formatting conflicts between single/double quotes and indentation rules.
 - **Solution:** Installed `eslint-config-prettier` to let Prettier handle all formatting while ESLint focuses on code quality.
 
@@ -114,8 +106,6 @@ By the end of Day 5, I learned that automation isn't about being lazy—it's abo
 - Explored how Husky makes Git hooks shareable across team members
 - Read about cron job syntax and scheduling patterns for automated tasks
 - Investigated how build artifacts and checksums ensure deployment integrity
-
----
 
 ## Overall Observation of the Week
 
