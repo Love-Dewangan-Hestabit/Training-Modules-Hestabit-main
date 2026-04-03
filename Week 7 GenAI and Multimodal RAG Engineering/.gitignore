@@ -1,15 +1,15 @@
 HELP
 
-/venv
+venv
 
 *__pycache__/
 
-Day 1 Local Rag System and Pipeline Architecture/src
+Day-1/src
 
-Day 2 Advanced Retrieval and Context Engineering/src
+Day-2/src
 
-Day 3 Image Rag (Multimodal Rag)/src
+Day-3/src
 
-Day 4 SQL Question Answering System/src
+Day-4/src
 
-Day 5 Advanced Rag, Memory and Evaluation/src
+Day-5/src
