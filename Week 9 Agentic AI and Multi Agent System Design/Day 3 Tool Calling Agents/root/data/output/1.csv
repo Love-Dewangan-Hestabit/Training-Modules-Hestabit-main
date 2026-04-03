@@ -1,32 +1,3 @@
-First Name,Last Name,Email,Phone,Gender,Department,Job Title,Years Of Experience,Salary
-Alexander,Archer,alexanderarcher42883@slingacademy.com,001-335-037-7267x43704,male,Product,Machine Learning Engineer,2,9000
-Aaron,Tran,aarontran59100@slingacademy.com,+1-121-704-1976x1624,male,Human Resource,Web Developer,6,9000
-John,Aguirre,johnaguirre60609@slingacademy.com,+1-159-954-5997x959,male,Product,Mobile Developer,5,8500
-Amanda,Thomas,amandathomas62534@slingacademy.com,001-629-462-1944,female,Product,DevOps Engineer,14,14000
-Allison,Matthews,allisonmatthews67968@slingacademy.com,(394)302-9258,female,Product,Tester,7,10500
-Angela,Morales,angelamorales88984@slingacademy.com,(340)684-6223x44918,female,Product,Machine Learning Engineer,15,15500
-Amy,Vaughn,amyvaughn93806@slingacademy.com,542.795.3600x28212,female,Product,Designer,8,11000
-Ashley,Watkins,ashleywatkins99733@slingacademy.com,2648820032,female,Product,Machine Learning Engineer,1,8500
-Amanda,Silva,amandasilva106678@slingacademy.com,3782883279,female,Product,Mobile Developer,7,8500
-Ashley,Carrillo,ashleycarrillo115254@slingacademy.com,001-097-500-5888,female,Product,Mobile Developer,10,10000
-Anna,White,annawhite116266@slingacademy.com,+1-197-659-8290x36913,female,Product,Web Developer,14,14000
-Amanda,Carey,amandacarey127761@slingacademy.com,4267904671,female,Product,Tester,12,11000
-Katherine,Arroyo,katherinearroyo143289@slingacademy.com,6849186207,female,Product,Machine Learning Engineer,8,12000
-Ashley,Mccann,ashleymccann144205@slingacademy.com,001-197-825-7624x4162,female,Product,Mobile Developer,12,13000
-Austin,Bell,austinbell151200@slingacademy.com,819-364-7742x938,male,Product,Web Developer,13,11500
-Paul,Allen,paulallen152129@slingacademy.com,2104766565,male,Product,Mobile Developer,14,12000
-Nicole,Aguilar,nicoleaguilar173533@slingacademy.com,(114)183-5226x2535,female,Product,Web Developer,9,11500
-Austin,Miller,austinmiller211536@slingacademy.com,(902)165-6805,male,Product,Web Developer,2,8000
-Sonya,Anderson,sonyaanderson212407@slingacademy.com,730-398-8945,female,Product,Mobile Developer,9,9500
-Alex,Perry,alexperry225459@slingacademy.com,311-298-4100,male,Product,Web Developer,1,5500
-Adam,Pratt,adampratt253430@slingacademy.com,829.922.4683,male,Product,Web Developer,15,14500
-Alex,Brown,alexbrown261126@slingacademy.com,259.588.0503x6257,male,Product,Mobile Developer,10,10000
-Breanna,Allen,breannaallen262640@slingacademy.com,+1-160-924-8899x786,female,Product,Web Developer,8,9000
-April,Houston,aprilhouston278529@slingacademy.com,001-825-098-6223x1127,female,Product,Web Developer,13,13500
-Adriana,Martinez,adrianamartinez279348@slingacademy.com,910.407.8536x8933,female,Product,Web Developer,11,12500
-Alec,Maldonado,alecmaldonado284511@slingacademy.com,-6414,male,Product,Web Developer,12,11000
-Andrea,Wilson,andreawilson293374@slingacademy.com,628-559-3098x06279,female,Product,Web Developer,7,10500
-Anthony,Colon,anthonycolon310182@slingacademy.com,001-388-080-7123x3000,male,Product,Web Developer,6,10000
-Aaron,Holland,aaronholland311364@slingacademy.com,001-527-705-3200x648,male,Product,Web Developer,1,6500
-Angela,Anderson,angelaanderson312306@slingacademy.com,(202)724-9857,female,Product,Web Developer,3,8500
-Adam,Bell,adambell318709@slingacademy.com,+1-426-702-6363x565,male,Product,Web Developer,11,10500
+Shipping Status,Count
+Pending,31
+Delivered,35
